@@ -1,8 +1,6 @@
-[Heroku Link]
-(https://feasteasy.herokuapp.com/)
+[Heroku Link](https://feasteasy.herokuapp.com/)
 
-[Trello Link]
-(https://trello.com/invite/b/wV42ikNz/21a1bb08fc1f69a9880879a2d1e81e54/feasteasy)
+[Trello Link](https://trello.com/invite/b/wV42ikNz/21a1bb08fc1f69a9880879a2d1e81e54/feasteasy)
 
 ## **Minimum Viable Product**
 1. New account creation, login, and guest/demo login
@@ -12,14 +10,14 @@
 3. Hosting on Heroku
 
 ## **Required Features:**
-  4. Create and search for OpenKitchen (Local's home kitchen)
+  4. Search search for OpenKitchen (Local's home kitchen)
   5. Reservations for a spot per evening on any available day
   6. Ratings/reviews for the kitchen
   7. Favorites
 
 ## **Bonus**
-  8. Bonus: Users profiles with pictures(on user show and reviews)
-  9. Bonus: Explore other diners' profiles
+  8. Bonus: Create Kitchen function
+  9. Bonus: City Drop down
 
 ## **Design Docs**
 + [View Wireframes](./wireframes/)  
@@ -36,7 +34,7 @@
 
 ### **Phase 2: Kitchen Model, API and Kitchen Show Components (2 days)**  
 
-+ Kitchens have photos and the following show container sections: about, photos, a kitchen information/about sidebar, and a sidebar with links to different parts of the kitchen show component. Also, a create kitchen button to create a kitchen.  
++ Kitchens have photos and the following show container sections: about, photos, a kitchen information/about sidebar, and a sidebar with links to different parts of the kitchen show component.
 
 ### **Phase 3: Reviews show and create form (2 days)**  
 
@@ -49,10 +47,18 @@ Also create a createReviewComponent on the same kitchen show page.
 
 ### **Phase 5: Restaurant Search (2 days)**  
 
-+ Customers can search for kitchens with tables of the right size available on specified dates. Customers can search for kitchens by city, cuisine type and name. Conducting a search leads to a search result component showing top search results and short kitchen profiles with links to kitchen show components.
++ Customers can search for kitchens with tables of the right size available on specified dates. Customers can search for kitchens by city, date, seats and optional cuisine type and name. Conducting a search leads to a search result component showing top search results and short kitchen profiles with links to kitchen show components.
 
-### **Phase 6: Popular kitchens filtered by cities drop down (1 days)**  
+## **Bonuses**
+
+### **Phase 6: Create Kitchen function (1day)**
+
++ Can create kitchen and have kitchen posted as a function
+
+### **Phase 7: Popular kitchens filtered by cities drop down (1 day)**  
 
 + By selecting a specific city drop down, kitchen icons will render below the search bar which users can click on to access kitchen show page.
 
-### **Bonuses: Add user profile pics and links to other user profile on reviews (TBD)**
+### **Phase 8: Add user account page**
+
++ User account show page to show user account details, reservations and favorites

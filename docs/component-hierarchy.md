@@ -11,11 +11,12 @@
 ### **MainContainer**
 + SearchBar Component(render different containers based on if       search/city drop down)
 
+### **Bonus**
 #### **PopularKitchensContainer**
   + kitchen Index components (might be a container itself)
   + Map Component
 
-#### **SearchResultContainer**
+### **SearchResultContainer**
   + kitchen research result component
 
 ### **KitchenShowContainer**
@@ -26,9 +27,11 @@
 + kitchen header component
 + reservation component
 
-##### **ReviewsContainer**
+#### **ReviewsContainer**
 + review index component
 + review create component
+
+## **Bonus**
 
 ### **UserShowContainer**
 + User Account Detail Component

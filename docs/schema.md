@@ -24,14 +24,15 @@ id | integer | primary key, not null
 creator_id | integer | not null, foreign_key   
 name | string | not null  
 cuisine | string | not null  
+city_id | integer | not null, foreign key  
 size | integer | not null    
+feast_time | string | not null  
 rating_score | integer |       
 address | string | not null  
 phone | string | not null  
-about | text | not null  
+about | string | not null  
 gps_location | array |  not null  
-photos | array | default: []  
-city_id | integer | not null, foreign key  
+photos_url | array | default: []  
 
 has_many :reservations
 has_many :reviews
@@ -43,9 +44,7 @@ Column Name | Data Type | Details
 --- | --- | ---  
 id | integer | primary key, not null  
 name | string | not null  
-gps_location | array |  not null  
 photo | string | not null  
-kitchens | array |
 
 ## **Reviews**  
 
@@ -71,7 +70,6 @@ kitchen_id | integer | not null, foreign key
 user_id | integer | not null, foreign_key  
 seats | integer | not null  
 date | date | not null  
-available | boolean | default: true  
 
 
 ## **Favorites**  

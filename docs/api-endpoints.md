@@ -12,7 +12,8 @@
 + **POST** /api/users
 
 ### **Favorites**
-+ **POST** /api/users/:userId/favorites
++ **POST** /api/favorites
++ **DELETE** /api/favorites
 
 
 ### **Session**   
@@ -26,21 +27,24 @@
 + **POST** /api/kitchens
 
 
-### **Cities**   (TBD)
+### **Cities**  
 + **GET** /api/cities  
-+ **GET** /api/cities/:id  
 
 
-### **Reviews**  (nested or not? not sure...)
-+ **GET** /api/kitchens/:kitchenId/reviews  
-+ **POST** /api/kitchens/:kitchenId/reviews  
+### **Reviews**  
++ **GET** /api/reviews
++ **POST** /api/reviews  
 
 
-### **Reservations**    (nested or not? not sure...)
-+ **POST** /api/kitchens/:kitchenId/reservations (params: a lot of stuff)
-
-(need to verify whether reservations info show up on user page, is that a required feature?)
-(If the current user is that reservation's customer or restaurant owner)  
+### **Reservations**    
 + **GET** /api/reservations  
++ **POST** /api/reservations (params: a lot of stuff)
+
+## **Bonus**
+### **Reservations** 
+(If the current user is that reservation's customer or restaurant owner)
 + **PATCH** /api/reservations/:id  
 + **DELETE** /api/reservations/:id  
+
+### **Users**  
++ **GET** /api/users/:userId
