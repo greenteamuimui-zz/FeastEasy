@@ -5,8 +5,7 @@
 Column Name | Data Type | Details  
 --- | --- | ---  
 id | integer | primary key, not null  
-first_name | string | not null  
-last_name | string | not null  
+username | string | not null  
 email | string | not null  
 password_digest | string | not null  
 session_token | string | not null  

@@ -1,16 +1,16 @@
 ```javascript  
 {    
   currentUser: {  
-      id: 1,
-      first_name: "Bob",
-      },
+    id: 1,
+    username: "Bob123",
+  },
 
-  forms: {
+  errors: {
     signUp: {errors: []},
     logIn: {errors: []},
-    createRestaurant: {errors: [""]},
-    createReservation: {errors: [""]},
-    createReview: {errors: [""]}
+    createReservation: {errors: ["body can't be blank"]},
+    createKitchen: {errors: ["body can't be blank"]},
+    createReview: {errors: ["body can't be blank"]}
   },
 
   cities: {
