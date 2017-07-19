@@ -12,12 +12,12 @@ const Header = ({currentUser, logout, logInAsGuest}) =>{
   } else {
     return (
       <div className="header-beforelogin">
-        <button onClick={() => logInAsGuest({
-          username: "Cherry",
+        <a onClick={() => logInAsGuest({
+          username: "Guest",
           password: "123456"
         })}>
-          Guest LogIn
-        </button>
+        Guest Log In
+        </a>
         <Link to="/signup">
           Sign Up
         </Link>

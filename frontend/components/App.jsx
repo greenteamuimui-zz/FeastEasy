@@ -8,6 +8,7 @@ import {AuthRoute} from '../util/route_util';
 const App = () => (
   <div>
     <header className="app-header">
+      <img className="s-logo" src="/assets/logo.png" alt="logo"/>
       <h1>App Header</h1>
       <HeaderContainer />
     </header>

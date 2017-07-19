@@ -10,9 +10,14 @@
   border: 10px solid black;
   justify-content: space-between;
   margin: 0 auto;
-  align-items: baseline;
+  align-items: center;
 }
 
 .app-header h1 {
   padding-left: 10px;
+}
+
+img.s-logo {
+  border: 1px solid black;
+  height: 60px;
 }
