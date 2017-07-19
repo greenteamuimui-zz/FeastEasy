@@ -2,15 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .header-beforelogin {
-  border: 1px solid black;
-  font-size: 35px;
+  font-size: 20px;
   display: flex;
+  // border: 1px solid black;
 }
 
 .header-beforelogin a {
   font-family: 'Zilla Slab', serif;
   text-decoration: none;
-  color: maroon;
-  border: 1px solid black;
+  color: white;
   margin: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px #651601;
+  outline: none;
+  background-color: #FFE3D9;
+}
+
+.header-beforelogin a{
+  background-color: #B35A43;
+}
+
+.header-beforelogin a:hover {
+  background-color: #651601;
+  cursor: pointer;
+}
+
+.header-beforelogin a:active {
+  background-color: #651601;
+  box-shadow: 0 1px #999;
+  transform: translateY(4px);
+}
+
+.header-afterlogin {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.header-afterlogin h1 {
+  border: 1px solid black;
+  color: #861A27;
+  font-size: 30px;
+  font-weight: 500;
 }

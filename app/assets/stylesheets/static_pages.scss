@@ -6,18 +6,29 @@
   font-size: 40px;
   font-family: 'Zilla Slab', serif;
   display: flex;
-  width: 95%;
-  border: 10px solid black;
+  width: 100%;
+  box-sizing: border-box;
+  // border: 5px solid black;
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
 }
 
-.app-header h1 {
+.app-left h1 {
   padding-left: 10px;
+  color: #861A27;
+  font-weight: 600;
+  border: 1px solid black;
+  display: flex;
+  // align-items: baseline;
 }
 
 img.s-logo {
-  border: 1px solid black;
-  height: 60px;
+  padding: 5px;
+  // border: 1px solid black;
+  height: 40px;
+}
+
+.app-left {
+  display: flex;
 }

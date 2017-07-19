@@ -8,8 +8,10 @@ import {AuthRoute} from '../util/route_util';
 const App = () => (
   <div>
     <header className="app-header">
-      <img className="s-logo" src="/assets/logo.png" alt="logo"/>
-      <h1>App Header</h1>
+      <div className="app-left">
+        <img className="s-logo" src="/assets/logo2.png" alt="logo"/>
+        <h1>Feast Easy</h1>
+      </div>
       <HeaderContainer />
     </header>
     <Switch>
