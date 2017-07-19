@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Header = ({currentUser, logout}) =>{
+const Header = ({currentUser, logout, logInAsGuest}) =>{
   if (currentUser) {
     return (
       <div className="header-afterlogin">
@@ -12,10 +12,15 @@ const Header = ({currentUser, logout}) =>{
   } else {
     return (
       <div className="header-beforelogin">
-          <Link to="/signup">
-            Sign Up
-          </Link>
-        <br/>
+        <button onClick={() => logInAsGuest({
+          username: "Cherry",
+          password: "123456"
+        })}>
+          Guest LogIn
+        </button>
+        <Link to="/signup">
+          Sign Up
+        </Link>
         <Link to="/login">
           Log In
         </Link>

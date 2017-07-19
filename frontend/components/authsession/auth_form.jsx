@@ -14,7 +14,6 @@ class AuthForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
     this.updateState = this.updateState.bind(this);
     this.closeModal = this.closeModal.bind(this);
-
   }
 
   componentWillReceiveProps(nextProps) {
@@ -52,7 +51,6 @@ class AuthForm extends React.Component {
   closeModal() {
     this.props.history.push('/');
   }
-
 
   render () {
 
