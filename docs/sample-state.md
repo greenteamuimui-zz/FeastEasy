@@ -12,25 +12,24 @@
       id: 1,
       name: "New York",
       photo: "image_url",
-      kitchens: [1, 2]
       }
     },  
 
   kitchens: {
     1: {      
       id: 1,
-      creator_id: 1,
+      user_id: 1,
       name: "Ilya's kitchen",
       cuisine: "Russian",
       city_id: 2
       size: 6,
-      feast_time, "7PM",
-      rating_score: 4,
+      feast_time, "7:00 PM",
+      overall_score: 4,
       address: "200 Okay Street, Brooklyn NY 11216",  
       phone: "987-123-4567",
       about: "Great cafe is an awesome cafe.",  
-      gps_location: [coordinates],
-      photos: [image_urls],
+      longitude: 3434,
+      latitude: -343,
     }
   },
 

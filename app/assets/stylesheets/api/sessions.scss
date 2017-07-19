@@ -40,7 +40,8 @@
 }
 
 .header-afterlogin h1 {
-  // border: 1px solid black;
+  border: 1px solid black;
+  // padding: 5px;
   color: #861A27;
   font-size: 30px;
   font-weight: 500;
@@ -54,6 +55,7 @@
   border-radius: 10px;
   color: white;
   font-size: 20px;
+  height: 40px;
 }
 
 .header-afterlogin button:hover {
