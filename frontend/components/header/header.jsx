@@ -4,14 +4,14 @@ import {Link} from 'react-router-dom';
 const Header = ({currentUser, logout}) =>{
   if (currentUser) {
     return (
-      <div>
+      <div className="header-afterlogin">
         <h1>Welcome {currentUser.username}!</h1>
         <button onClick={logout}>Log Out</button>
       </div>
     );
   } else {
     return (
-      <div>
+      <div className="header-beforelogin">
         <Link to="/signup">
           Sign Up
         </Link>

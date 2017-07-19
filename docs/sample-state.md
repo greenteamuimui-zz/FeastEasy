@@ -5,13 +5,7 @@
     username: "Bob123",
   },
 
-  errors: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    createReservation: {errors: ["body can't be blank"]},
-    createKitchen: {errors: ["body can't be blank"]},
-    createReview: {errors: ["body can't be blank"]}
-  },
+  errors: [],
 
   cities: {
     1: {     

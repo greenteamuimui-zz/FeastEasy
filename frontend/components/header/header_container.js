@@ -3,7 +3,7 @@ import {logout} from '../../actions/session_actions';
 import Header from './header';
 
 const mapStatetoProps = (state) => ({
-  currentUser: state.session.currentUser
+  currentUser: state.currentUser
 });
 
 const mapDispatchtoProps = (dispatch) => ({

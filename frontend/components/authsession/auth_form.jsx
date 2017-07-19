@@ -15,15 +15,22 @@ class AuthForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
+  if (this.props.location.pathname !== nextProps.location.pathname){
+    this.props.clearErrors();
+    this.setState({
+      username: "",
+      email: "",
+      password: ""
+    });
+  } else if (nextProps.loggedIn) {
       this.props.history.push('/');
-      }
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, {user: this.state});
-    this.props.processForm(user);
+    // const user = Object.assign({}, {user: this.state});
+    this.props.processForm(this.state);
   }
 
   updateState(property) {
@@ -35,7 +42,7 @@ class AuthForm extends React.Component {
   renderErrors() {
     return (
       <p>
-        {this.props.errors}
+        {this.props.errors[0]}
       </p>
     );
   }
@@ -43,15 +50,13 @@ class AuthForm extends React.Component {
 
 
   render () {
-
     const formType = this.props.formType;
     let emailInput = null;
     if (formType === "signup") {
       emailInput=
       <label>
-        <h2>Email</h2>
+        <h2>Email Address</h2>
         <input type="text"
-          placeholder="Email Address"
           value={this.state.email}
           onChange={this.updateState("email")}
           className="auth-email" />
