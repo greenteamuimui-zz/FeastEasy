@@ -10,7 +10,7 @@ const App = () => (
     <div className="static">
     <header className="app-header">
       <div className="app-left">
-        <img className="s-logo" src="/assets/logo2.png" alt="logo"/>
+        <img className="s-logo" src="http://res.cloudinary.com/greenteamuimui/image/upload/v1500503298/apron_hyqxck.png" alt="logo"/>
         <h1>Feast Easy</h1>
       </div>
       <HeaderContainer />
