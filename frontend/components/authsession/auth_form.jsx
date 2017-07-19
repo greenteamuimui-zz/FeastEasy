@@ -70,7 +70,7 @@ class AuthForm extends React.Component {
         left                       : '40%',
         right                      : 'auto',
         bottom                     : 'auto',
-        border                     : '5px solid #7F9E87',
+        border                     : '5px solid #AE1628',
         background                 : '#fff',
         overflow                   : 'auto',
         WebkitOverflowScrolling    : 'touch',
@@ -86,37 +86,38 @@ class AuthForm extends React.Component {
     let otherlink = <Link to="/signup">Create an account here!</Link>;
     if (formType === "signup") {
       emailInput=
-      <label>
+      <label className="extra">
         <h2>Email Address</h2>
-        <input type="text"
+        <input className="input" type="text"
           value={this.state.email}
           onChange={this.updateState("email")}
           className="auth-email" />
       </label>;
       otherlink =
-      <Link to="/login">Already Signed up? Log In here</Link>;
+      <Link className="link-to-other" to="/login">Already Signed up? Log In here</Link>;
     }
 
       return (
         <div>
           <Modal
+            className="modal"
             isOpen={true}
             contentLabel="Modal"
             onRequestClose={this.closeModal}
             style={customStyles}
             >
               <header>Please {formType}!</header>
-              <button onClick={this.closeModal}>x</button>
+              <a className ="x" onClick={this.closeModal}>x</a>
               {this.renderErrors()}
-              <form onSubmit={this.handleSubmit}>
+              <form className="auth-form" onSubmit={this.handleSubmit}>
                 {emailInput}
                 <h2>Username</h2>
-                <input type="text" value={this.state.username}
+                <input className="input" type="text" value={this.state.username}
                 onChange={this.updateState('username')} />
                 <h2>Password</h2>
-                <input type="password" value={this.state.password}
+                <input className="input" type="password" value={this.state.password}
                 onChange={this.updateState('password')} />
-                <input type="submit" value="Submit" />
+                <input className="submit-button" type="submit" value="Submit" />
               </form>
               {otherlink}
           </Modal>

@@ -1,0 +1,91 @@
+.modal {
+  // display: flex;
+  // justify-content: center;
+  position: relative;
+  box-shadow: 0 3px #820C1A;
+}
+
+
+.modal header{
+  font-family: 'Zilla Slab', serif;
+  font-size: 40px;
+  padding: 5px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+  color: #820C1A;
+  font-weight: 600;
+
+}
+
+.modal a.x {
+  position: absolute;
+  font: 16px/100% arial, sans-serif;
+  border-radius: 1px;
+  color: #78100D;
+  right: 10px;
+  top: 10px;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: 600;
+}
+
+.modal a.x:hover {
+  cursor: pointer;
+}
+
+.modal form.auth-form {
+  color: #820C1A;
+  font-weight: 400;
+  font-family: 'Zilla Slab', serif;
+  font-size: 20px;
+}
+
+.modal form.auth-form h2 {
+  padding: 10px 0px;
+}
+
+label.extra input {
+  width: 200px;
+
+}
+
+.modal form{
+  // border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.modal input.input {
+  width: 200px;
+
+}
+
+a.link-to-other {
+  // border: 1px solid black;
+  margin-top: 20px;
+  font-family: 'Zilla Slab', serif;
+  display: flex;
+  justify-content: center;
+}
+
+.modal input.submit-button {
+  font-family: 'Zilla Slab', serif;
+  border: 1px solid black;
+  font-weight: bold;
+  color: white;
+  margin: 10px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px #651601;
+  background-color: #820C1A;
+}
+
+
+.modal input.submit-button:hover {
+  background-color: #651601;
+  cursor: pointer;
+}
+
+.modal input.submit-button:active {
+  background-color: #651601;
+  box-shadow: 0 1px #999;
+  transform: translateY(4px);
+}

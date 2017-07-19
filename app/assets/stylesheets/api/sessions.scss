@@ -16,7 +16,6 @@
   border-radius: 10px;
   box-shadow: 0 3px #651601;
   outline: none;
-  background-color: #FFE3D9;
 }
 
 .header-beforelogin a{
@@ -37,12 +36,33 @@
 .header-afterlogin {
   display: flex;
   justify-content: center;
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 
 .header-afterlogin h1 {
-  border: 1px solid black;
+  // border: 1px solid black;
   color: #861A27;
   font-size: 30px;
   font-weight: 500;
+  margin-right: 30px;
+}
+
+.header-afterlogin button {
+  font-family: 'Zilla Slab', serif;
+  background-color: #78100D;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.header-afterlogin button:hover {
+  background-color: #530B09;
+  cursor: pointer;
+}
+
+.header-beforelogin button:active {
+  background-color: #530B09;
+  box-shadow: 0 1px #999;
+  transform: translateY(4px);
 }

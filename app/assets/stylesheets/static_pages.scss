@@ -2,13 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.static {
+  position: relative;
+  // display: flex;
+}
+
 .app-header {
   font-size: 40px;
   font-family: 'Zilla Slab', serif;
   display: flex;
   width: 100%;
-  box-sizing: border-box;
-  // border: 5px solid black;
+  // box-sizing: border-box;
+  // border: 1px solid black;
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
@@ -18,7 +23,7 @@
   padding-left: 10px;
   color: #861A27;
   font-weight: 600;
-  border: 1px solid black;
+  // border: 1px solid black;
   display: flex;
   // align-items: baseline;
 }
@@ -31,4 +36,42 @@ img.s-logo {
 
 .app-left {
   display: flex;
+}
+
+div.search-bar {
+  // border: 5px solid black;
+  position: relative;
+  // height: 50%
+}
+
+img.main {
+  position: absolute;
+  left: 25px;
+  // border: 1px solid black;
+  width: 95%;
+}
+
+
+div.search-bar section {
+  border-radius: 5px;
+  position: absolute;
+  top: 450px;
+  left: 100px;
+  background-color: white;
+  width: 80%;
+  height: 250px;
+  border: 5px solid 999;
+  box-shadow: 2px 2px 2px #999;
+}
+
+div.search-bar h2 {
+  padding: 20px;
+  font-size:25px;
+  font-family: 'Zilla Slab', serif;
+}
+
+div.search-bar h3 {
+  font-size:20px;
+  margin-left: 20px;
+  font-family: 'Zilla Slab', serif;
 }
