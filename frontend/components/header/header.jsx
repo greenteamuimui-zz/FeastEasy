@@ -12,9 +12,9 @@ const Header = ({currentUser, logout}) =>{
   } else {
     return (
       <div className="header-beforelogin">
-        <Link to="/signup">
-          Sign Up
-        </Link>
+          <Link to="/signup">
+            Sign Up
+          </Link>
         <br/>
         <Link to="/login">
           Log In
