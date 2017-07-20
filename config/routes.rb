@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :users, only:[:create]
     resources :kitchens, only:[:create, :show, :index]
     resources :cities, only:[:index]
+    resources :reservations, only:[:index, :create]
     resource :session, only:[:create, :destroy]
   end
   root "static_pages#root"
