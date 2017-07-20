@@ -16,11 +16,9 @@
   border-radius: 10px;
   box-shadow: 0 3px #651601;
   outline: none;
-}
-
-.header-beforelogin a{
   background-color: #B35A43;
 }
+
 
 .header-beforelogin a:hover {
   background-color: #651601;
@@ -40,6 +38,7 @@
   // border: 1px solid black;
 }
 
+
 .header-afterlogin h1 {
   // border: 1px solid black;
   // padding: 5px;
@@ -49,24 +48,29 @@
   margin-right: 10px;
 }
 
-.header-afterlogin button {
+
+// Need to refactor the code to just style all the buttons the same
+.header-afterlogin a {
   font-family: 'Zilla Slab', serif;
-  background-color: #78100D;
-  margin: 5px 10px;
+  text-decoration: none;
+  color: white;
+  margin: 10px;
   padding: 5px 10px;
   border-radius: 10px;
-  color: white;
   font-size: 20px;
-  height: 40px;
+  box-shadow: 0 3px #651601;
+  outline: none;
+  background-color: #B35A43;
 }
 
-.header-afterlogin button:hover {
-  background-color: #530B09;
+
+.header-afterlogin a:hover {
+  background-color: #651601;
   cursor: pointer;
 }
 
-.header-beforelogin button:active {
-  background-color: #530B09;
+.header-afterlogin a:active {
+  background-color: #651601;
   box-shadow: 0 1px #999;
   transform: translateY(4px);
 }

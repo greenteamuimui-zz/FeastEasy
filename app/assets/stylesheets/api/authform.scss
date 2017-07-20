@@ -2,7 +2,7 @@
   // display: flex;
   // justify-content: center;
   position: relative;
-  box-shadow: 0 3px #820C1A;
+  box-shadow: 4px 4px 4px #820C1A;
 }
 
 
@@ -40,11 +40,12 @@
 }
 
 .modal form.auth-form h2 {
-  padding: 10px 0px;
+  // border: 1px solid black;
+  padding: 10px 0px 0px 0px;
 }
 
 label.extra input {
-  width: 200px;
+  width: 250px;
 
 }
 
@@ -71,7 +72,7 @@ a.link-to-other {
   // border: 1px solid black;
   font-weight: bold;
   color: white;
-  margin: 10px;
+  margin-left: 10px;
   padding: 3px 10px;
   border-radius: 5px;
   box-shadow: 0 2px #651601;
@@ -88,4 +89,10 @@ a.link-to-other {
   background-color: #651601;
   box-shadow: 0 1px #999;
   transform: translateY(4px);
+}
+
+.modal a {
+  font-family: 'Zilla Slab', serif;
+  display: flex;
+  justify-content: center;
 }

@@ -6,7 +6,7 @@ const Header = ({currentUser, logout, logInAsGuest}) =>{
     return (
       <div className="header-afterlogin">
         <h1>Welcome {currentUser.username}!</h1>
-        <button onClick={logout}>Log Out</button>
+        <a onClick={logout}>Log Out</a>
       </div>
     );
   } else {
