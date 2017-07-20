@@ -21,4 +21,6 @@ k3 = Kitchen.create!(user_id:u3.id, city_id:1, name:"Grill Time, beer time!", cu
 
 k4 = Kitchen.create!(user_id:u1.id, city_id:3, name:"Hong Kong Home Style Cafe", cuisine:"Chinese", size:12, feast_time:"7:30 PM", phone:"28898091", address:"City Garden, North Point, Hong Kong", about:"Milk tea all the way")
 
-r1 = Reservation.create!()
+r1 = Reservation.create!(kitchen_id: k1.id, user_id:u2.id, seats: 4, date: Date.new(2007, 6, 1))
+r2 = Reservation.create!(kitchen_id: k1.id, user_id:u3.id, seats: 1, date: Date.new(2007, 6, 1))
+r3 = Reservation.create!(kitchen_id: k2.id, user_id:u1.id, seats: 6, date: Date.new(2007, 6, 2))

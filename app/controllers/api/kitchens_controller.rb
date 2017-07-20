@@ -10,7 +10,8 @@ class Api::KitchensController < ApplicationController
   end
 
   def index
-    @kitchen = Kitchen.all
+    filtered_kitchens = get_kitchens_using_params
+    @kitchens = reservation_comparator(filtered_kitchens)
   end
 
   def show
@@ -26,7 +27,11 @@ class Api::KitchensController < ApplicationController
     else
       filtered_kitchens = kitchens.where('LOWER(name) LIKE ? OR LOWER(cuisine) LIKE ? OR LOWER(about) LIKE ?', "%#{search_string.downcase}%","%#{search_string.downcase}%","%#{search_string.downcase}%")
     end
-    date = Date.new(params[:search][:date])
+    filtered_kitchens
+  end
+
+  def reservation_comparator(filtered_kitchens)
+    date = params[:search][:date]
     result = [];
     filtered_kitchens.each do |kitchen|
       total_seats = 0;
@@ -41,9 +46,13 @@ class Api::KitchensController < ApplicationController
     end
     result
   end
-
   # test case
-  # params = {search:{city_id:1, size:2, search_string:"asian"}}
+
+  # params = {search:{city_id:1, size:4, search_string:"asian", date:Date.new(2007, 6, 1)}}
+  #
+  # filtered_kitchens = get_kitchens_using_params(params)
+  #
+  # reservation_comparator(filtered_kitchens)
 
 
   private
