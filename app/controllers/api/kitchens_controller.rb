@@ -18,7 +18,10 @@ class Api::KitchensController < ApplicationController
     @kitchen = Kitchen.find(params[:id])
   end
 
-  def get_kitchens_using_params(params)
+
+  private
+
+  def get_kitchens_using_params
     size = params[:search][:size].to_i
     search_string = params[:search][:search_string]
     kitchens = Kitchen.where({city_id: params[:search][:city_id]}).where('size > ?', size)
@@ -40,7 +43,7 @@ class Api::KitchensController < ApplicationController
           total_seats += reservation.seats
         end
       end
-      unless size + total_seats > kitchen.size
+      unless params[:search][:size].to_i + total_seats > kitchen.size
         result << kitchen
       end
     end
@@ -53,9 +56,6 @@ class Api::KitchensController < ApplicationController
   # filtered_kitchens = get_kitchens_using_params(params)
   #
   # reservation_comparator(filtered_kitchens)
-
-
-  private
 
   def kitchen_params
     params.require(:kitchen).permit(:name, :cuisine, :size, :feast_time, :address, :phone, :about)

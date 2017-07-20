@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720063617) do
+ActiveRecord::Schema.define(version: 20170720173410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 20170720063617) do
     t.index ["user_id"], name: "index_kitchens_on_user_id"
   end
 
+  create_table "pictures", force: :cascade do |t|
+    t.integer "kitchen_id", null: false
+    t.string "image_url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kitchen_id"], name: "index_pictures_on_kitchen_id"
+  end
+
   create_table "reservations", force: :cascade do |t|
     t.integer "kitchen_id", null: false
     t.integer "user_id", null: false
@@ -47,6 +55,22 @@ ActiveRecord::Schema.define(version: 20170720063617) do
     t.datetime "updated_at", null: false
     t.index ["kitchen_id"], name: "index_reservations_on_kitchen_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "kitchen_id", null: false
+    t.integer "user_id", null: false
+    t.string "title", null: false
+    t.string "body", null: false
+    t.integer "food_score", null: false
+    t.integer "atmosphere_score", null: false
+    t.integer "host_score", null: false
+    t.integer "price_score", null: false
+    t.float "overall_score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kitchen_id"], name: "index_reviews_on_kitchen_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

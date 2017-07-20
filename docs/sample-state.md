@@ -27,9 +27,8 @@
       overall_score: 4,
       address: "200 Okay Street, Brooklyn NY 11216",  
       phone: "987-123-4567",
-      about: "Great cafe is an awesome cafe.",  
-      longitude: 3434,
-      latitude: -343,
+      about: "Great cafe is an awesome cafe.",
+      image_url: [path1, path2]
     }
   },
 

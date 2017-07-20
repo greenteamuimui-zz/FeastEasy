@@ -87,3 +87,10 @@ Column Name | Data Type | Details
 id | integer | primary key, not null  
 user_id | integer | not null, foreign_key  
 kitchen_id | integer | not null, foreign key  
+
+## **Pictures**  
+Column Name | Data Type | Details  
+--- | --- | ---
+id | integer | primary key, not null  
+image_url | string | not null, foreign_key  
+kitchen_id | integer | not null, foreign key  
