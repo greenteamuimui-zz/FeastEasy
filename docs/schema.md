@@ -27,12 +27,10 @@ cuisine | string | not null
 city_id | integer | not null, foreign key  
 size | integer | not null    
 feast_time | string | not null  
-overall_score | integer |       
 address | string | not null  
 phone | string | not null  
 about | string | not null  
-longitude | float |  not null
-latitude | float |  not null
+
 
 has_many :reservations
 has_many :reviews
@@ -48,6 +46,7 @@ name | string | not null
 photo | string | not null  
 
 has_many: kitchens
+has_many: reservations (through  kitchens)
 
 ## **Reviews**  
 
