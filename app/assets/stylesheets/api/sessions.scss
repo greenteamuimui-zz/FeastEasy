@@ -36,6 +36,7 @@
 .header-afterlogin {
   display: flex;
   justify-content: center;
+  align-items: center;
   // border: 1px solid black;
 }
 
@@ -45,12 +46,13 @@
   color: #861A27;
   font-size: 30px;
   font-weight: 500;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .header-afterlogin button {
   font-family: 'Zilla Slab', serif;
   background-color: #78100D;
+  margin: 5px 10px;
   padding: 5px 10px;
   border-radius: 10px;
   color: white;

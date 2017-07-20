@@ -17,6 +17,7 @@ div.static {
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
+  height: 60px;
 }
 
 .app-left h1 {
@@ -39,22 +40,26 @@ img.s-logo {
 }
 
 div.search-bar {
-  // border: 5px solid black;
+  border: 1px solid black;
   position: relative;
-  // height: 50%
+  background-image: url("http://res.cloudinary.com/greenteamuimui/image/upload/c_scale,r_30,w_1182/v1500496835/imageedit_5_8288987673_i4iq3j.png");
+  background-size: cover;
+  min-height: 600px;
+  // height: 100%;
 }
 
-img.main {
-  // position: absolute;
-  left: 25px;
-  // border: 1px solid black;
-  width: 95%;
-}
+// img.main {
+//   // position: absolute;
+//   // left: 25px;
+//   margin: 0 auto;
+//   border: 1px solid black;
+//   width: 95%;
+// }
 
 
 div.search-bar section {
   border-radius: 5px;
-  position: absolute;
+  position: relative;
   top: 450px;
   left: 100px;
   background-color: white;
