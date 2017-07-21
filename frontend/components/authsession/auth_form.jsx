@@ -100,7 +100,7 @@ class AuthForm extends React.Component {
     }
 
       return (
-        <div>
+        <div className="search-bar">
           <Modal
             className="modal"
             isOpen={true}
