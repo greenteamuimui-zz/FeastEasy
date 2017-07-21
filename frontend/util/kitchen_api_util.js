@@ -1,5 +1,4 @@
 export const fetchKitchens = (search) => {
-  console.log(search);
   return (
     $.ajax({
       method: 'GET',

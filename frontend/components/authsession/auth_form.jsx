@@ -119,7 +119,7 @@ class AuthForm extends React.Component {
                 <h2>Password</h2>
                 <input className="input" type="password" value={this.state.password}
                 onChange={this.updateState('password')} />
-              <input className="submit-button" type="submit" value="Join Us" />
+              <input className="submit-button" type="submit" value={message} />
               </form>
               {otherlink}
           </Modal>
