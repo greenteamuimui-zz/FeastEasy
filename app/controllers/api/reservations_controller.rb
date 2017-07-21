@@ -4,7 +4,7 @@ class Api::ReservationsController < ApplicationController
     kitchen = Kitchen.includes(:reservations).find(params[:id])
     total_seats = 0
     kitchen.reservations.each do |reservation|
-      if reservation.date == params[:reservation][:date]
+      if reservation.date == Date.parse(params[:reservation][:date])
         total_seats += reservation.seats
       end
     end
@@ -22,8 +22,9 @@ class Api::ReservationsController < ApplicationController
   end
 
   def index
-    kitchens = Kitchen.find(params[:id])
-    @reservations = kitchens.reservations
+    kitchens = Kitchen.find(params[:kitchenId])
+    @reservations = kitchens.reservations.where(date: Date.parse(params[:date]))
+    debugger
   end
 
   private

@@ -6,7 +6,7 @@ export const RECEIVE_RESERVATIONS = "RECEIVE_RESERVATIONS";
 export const createReservation = (reservation) => (dispatch) => {
   return (
     ReservationAPIUtil.createReservation(reservation).then(
-      kitchen => {
+      reservation => {
       dispatch(receiveReservation(reservation));
       dispatch(ErrorsAction.clearErrors());
     },
@@ -15,9 +15,9 @@ export const createReservation = (reservation) => (dispatch) => {
   );
 };
 
-export const fetchReservations = (id) => (dispatch) => {
+export const fetchReservations = (kitchenId, date) => (dispatch) => {
   return (
-    ReservationAPIUtil.fetchReservations(id).then(
+    ReservationAPIUtil.fetchReservations(kitchenId, date).then(
       reservations => {
       dispatch(receiveReservation(reservations));
       dispatch(ErrorsAction.clearErrors());

@@ -8,11 +8,11 @@ export const createReservation = (reservation) => {
   );
 };
 
-export const fetchReservations = (id) => {
+export const fetchReservations = (kitchenId, date) => {
   return (
     $.ajax({
       method: 'GET',
-      url: `/api/reservations/${id}`,
+      url: `/api/reservations/?kitchenId=${kitchenId}&date=${date}`,
     })
   );
 };
