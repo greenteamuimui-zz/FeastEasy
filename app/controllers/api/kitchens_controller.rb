@@ -18,7 +18,6 @@ class Api::KitchensController < ApplicationController
     @kitchen = Kitchen.find(params[:id])
   end
 
-
   private
 
   def get_kitchens_using_params

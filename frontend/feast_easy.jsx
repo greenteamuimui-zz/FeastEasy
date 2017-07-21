@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {fetchKitchens, fetchKitchen, createKitchen} from './actions/kitchen_actions';
+import {fetchReservations, createReservation} from './actions/reservation_actions';
 import configureStore from './store/store';
 import Root from './components/root';
 
@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchKitchen = fetchKitchen;
-  window.fetchKitchens = fetchKitchens;
+  window.fetchReservations = fetchReservations;
+  window.createReservation = createReservation;
   window.dateCreate = Date.new;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
