@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderContainer from './header/header_container';
 import AuthFormContainer from './authsession/auth_form_container';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import {AuthRoute} from '../util/route_util';
 import KitchenDetailContainer from './kitchen/kitchen_detail_container';
 import SearchBar from './header/searchbar';
@@ -13,8 +13,12 @@ const App = () => (
     <div className="static">
     <header className="app-header">
       <div className="app-left">
-        <img className="s-logo" src="http://res.cloudinary.com/greenteamuimui/image/upload/v1500503298/apron_hyqxck.png" alt="logo"/>
-        <h1>Feast Easy</h1>
+        <Link to="/">
+          <img className="s-logo" src="http://res.cloudinary.com/greenteamuimui/image/upload/v1500503298/apron_hyqxck.png" alt="logo"/>
+        </Link>
+        <Link to="/">
+          <h1>Feast Easy</h1>
+        </Link>
       </div>
       <HeaderContainer />
     </header>

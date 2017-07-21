@@ -42,7 +42,7 @@ class AuthForm extends React.Component {
 
   renderErrors() {
     return (
-      <p>
+      <p className="errors">
         {this.props.errors[0]}
       </p>
     );
@@ -83,8 +83,10 @@ class AuthForm extends React.Component {
     // determine what to render
     const formType = this.props.formType;
     let emailInput = null;
+    let message = "Log In";
     let otherlink = <Link to="/signup">Create an account here!</Link>;
     if (formType === "signup") {
+      message = "Sign Up"
       emailInput=
       <label className="extra">
         <h2>Email Address</h2>
@@ -106,7 +108,7 @@ class AuthForm extends React.Component {
             onRequestClose={this.closeModal}
             style={customStyles}
             >
-              <header>Please {formType}!</header>
+              <header>Please {message}!</header>
               <a className ="x" onClick={this.closeModal}>x</a>
               {this.renderErrors()}
               <form className="auth-form" onSubmit={this.handleSubmit}>
@@ -117,7 +119,7 @@ class AuthForm extends React.Component {
                 <h2>Password</h2>
                 <input className="input" type="password" value={this.state.password}
                 onChange={this.updateState('password')} />
-                <input className="submit-button" type="submit" value="Submit" />
+              <input className="submit-button" type="submit" value="Join Us" />
               </form>
               {otherlink}
           </Modal>

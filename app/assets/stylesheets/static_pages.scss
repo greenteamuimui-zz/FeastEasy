@@ -7,6 +7,10 @@ div.static {
   // display: flex;
 }
 
+div.static a {
+  text-decoration: none;
+}
+
 .app-header {
   font-size: 40px;
   font-family: 'Zilla Slab', serif;
