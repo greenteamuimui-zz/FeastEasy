@@ -18,19 +18,43 @@ const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
             {city}
           </h2>
           <h3>
-            {kitchen.overall_score}
+            Overall Score: {kitchen.overall_score}
           </h3>
           <button onClick={addFavorite}>
             Favorite
           </button>
         </div>
-        <div className='kitchen-details'>
-          <h2>Party Details</h2>
-          {kitchen.about}
-          {kitchen.phone}
-          {kitchen.address}
-        </div>
-        <ReservationBoxContainer />
+
+        <div className="kitchen-info">
+          <div className='right-first-box'>
+            <div className='kitchen-about'>
+              <h2>About</h2>
+              <p>
+                {kitchen.about}
+              </p>
+            </div>
+            <ReservationBoxContainer />
+          </div>
+          <div className='kitchen-details'>
+            <h2>Party Details</h2>
+            <h3>Dinner Time</h3>
+            <p>
+              {kitchen.feast_time}
+            </p>
+            <h3>Seatings</h3>
+            <p>
+              {kitchen.size}
+            </p>
+            <h3>Phone</h3>
+            <p>
+              {kitchen.phone}
+            </p>
+            <h3>Address</h3>
+            <p>
+              {kitchen.address}
+            </p>
+            </div>
+          </div>
       </div>
   );
 

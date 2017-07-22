@@ -40,7 +40,9 @@ class KitchenDetail extends React.Component {
     let picComponent = pictures.map((picture, idx) => {
       return (
       <li key={idx}>
-        <img className="kitchen-pictures" src={picture.image_url}/>
+        <div className="pic-box">
+          <img className="kitchen-pictures" src={picture.image_url}/>
+        </div>
       </li>
       );
     });
