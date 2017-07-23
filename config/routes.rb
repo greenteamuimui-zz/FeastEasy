@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :kitchens, only:[:create, :show, :index]
     resources :cities, only:[:index]
     resources :reservations, only:[:index, :create]
+    resources :reviews, only:[:index, :create]
     resource :session, only:[:create, :destroy]
   end
   root "static_pages#root"
