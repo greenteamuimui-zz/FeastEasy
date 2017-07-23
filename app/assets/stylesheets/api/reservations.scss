@@ -1,3 +1,120 @@
 // Place all the styles related to the Api/reservations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.reservation-box {
+    border: 2px solid #651601;
+    margin: 10px 10px 20px 10px;
+    padding: 20px;
+    box-shadow: 2px 3px 3px #651601;
+    border-radius: 10px;
+    position: relative;
+  }
+
+.reservation-box h2 {
+    // border: 2px solid black;
+    color: #651601;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+
+.reservation-box h3 {
+  color:c;
+  text-align: baseline;
+  // border: 2px solid black;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.reservation-box h4 {
+  color: #861A27;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
+
+
+.reservation-form {
+  border-radius: 5px;
+  border: 2px solid grey;
+  box-shadow: 2px 2px 2px grey;
+  margin: auto;
+  width: 650px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+input[type=date] {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  cursor:pointer;
+}
+
+
+input[type=number] {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 30px;
+    width:50px;
+    line-height: 30px;
+    font-size: 16px;
+    padding: 0 5px;
+    cursor:pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    cursor:pointer;
+    display:block;
+    width:6px;
+    text-align:center;
+    position:relative;
+    top:2px;
+    right: -2px;
+}
+
+input[type=number]:hover::-webkit-inner-spin-button {
+    background: #eee url('http://i.stack.imgur.com/YYySO.png') no-repeat 50% 50%;
+    width: 14px;
+    height: 14px;
+    padding: 4px;
+    position: relative;
+    border-radius: 28px;
+}
+
+input[type=submit] {
+  font-family: 'Zilla Slab', serif;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px #651601;
+  outline: none;
+  background-color: #B35A43;
+  border: 1px solid #B35A43;
+}
+
+input[type=submit]:hover {
+  background-color: #651601;
+  cursor: pointer;
+  border: 1px solid #651601;
+}
+
+input[type=submit]:active {
+  background-color: #651601;
+  box-shadow: 0 1px #999;
+  transform: translateY(4px);
+}

@@ -1,18 +1,20 @@
 import {connect} from 'react-redux';
-import {fetchReservations} from '../../actions/reservation_actions';
+import {createReservation, fetchReservations} from '../../actions/reservation_actions';
 import {clearErrors} from '../../actions/errors_actions';
 import ReservationBox from './reservation_box';
 import { withRouter } from 'react-router-dom';
 
 const mapStatetoProps = (state) => {
   return {
-    reservation: state.reservation
+    reservation: state.reservation,
+    currentUser: state.currentUser
   };
 };
 
 
 const mapDispatchtoProps = (dispatch) => {
   return {
+  createReservation: (reservation) => dispatch(createReservation(reservation)),
   fetchReservations: (kitchenId, date) => dispatch(fetchReservations(kitchenId, date)),
   clearErrors: () => dispatch(clearErrors())
   };
