@@ -4,7 +4,6 @@ export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 
 export const createReview = (review) => (dispatch) => {
-  console.log(review);
   return (
     ReviewAPIUtil.createReview(review).then(
       review => {

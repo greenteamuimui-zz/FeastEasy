@@ -1,21 +1,21 @@
 import {connect} from 'react-redux';
-import {fetchReviews} from '../../actions/review_actions';
+import {createReview} from '../../actions/review_actions';
 import {clearErrors} from '../../actions/errors_actions';
-import ReviewBox from './review_box';
+import ReviewForm from './review_form';
 import { withRouter } from 'react-router-dom';
-import { selectAllReviews } from '../../reducers/selectors';
 
 const mapStatetoProps = (state) => {
   return {
-    review: selectAllReviews(state),
-    currentUser: state.currentUser
+    review: state.review,
+    currentUser: state.currentUser,
+    errors: state.errors
   };
 };
 
 
 const mapDispatchtoProps = (dispatch) => {
   return {
-  fetchReviews: (kitchenId) => dispatch(fetchReviews(kitchenId)),
+  createReview: (review) => dispatch(createReview(review)),
   clearErrors: () => dispatch(clearErrors())
   };
 };
@@ -23,4 +23,4 @@ const mapDispatchtoProps = (dispatch) => {
 export default withRouter (connect(
   mapStatetoProps,
   mapDispatchtoProps
-)(ReviewBox));
+)(ReviewForm));

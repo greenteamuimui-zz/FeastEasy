@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ReservationBoxContainer from '../reservation/reservation_box_container';
 import ReviewBoxContainer from '../review/review_box_container';
+import ReviewFormContainer from '../review/review_form_container';
 
 
 const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
@@ -36,6 +37,7 @@ const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
             </div>
             <ReservationBoxContainer kitchenSize={kitchen.size} />
             <ReviewBoxContainer />
+            <ReviewFormContainer />
           </div>
           <div className='kitchen-details'>
             <h2>Party Details</h2>

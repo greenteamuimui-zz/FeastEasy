@@ -16,17 +16,17 @@ class ReviewBox extends React.Component {
 
   render () {
     console.log(this.props);
-    console.log(this.props.review);
     if (this.props.review === null) {
       return null;
     }
     const {review} = this.props;
-    console.log(review);
     return (
+    <div>
       <div className="review-box">
         <h1>Reviews</h1>
         {review.map(indivReview => <ReviewBoxItem key={indivReview.id} review={indivReview} />)}
       </div>
+    </div>
     );
   }
 

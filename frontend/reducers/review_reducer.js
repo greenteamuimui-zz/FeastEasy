@@ -9,7 +9,8 @@ const reviewReducer = (state = null, action) => {
     case RECEIVE_REVIEW:
     console.log(state);
     console.log(action);
-    newState = action.review;
+    newState = Object.assign({}, state, action.review);
+    console.log(newState);
     return newState;
     case RECEIVE_REVIEWS:
     newState = action.reviews;

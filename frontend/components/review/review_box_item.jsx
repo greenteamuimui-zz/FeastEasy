@@ -4,7 +4,6 @@ import ReviewBoxContainer from '../reservation/reservation_box_container';
 
 
 const ReviewBoxItem = ({review}) => {
-  console.log(review);
   let overall_score = Math.floor(review.overall_score);
   let img_path  = `/assets/score${overall_score}`;
   return (
