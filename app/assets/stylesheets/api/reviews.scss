@@ -1,3 +1,78 @@
 // Place all the styles related to the Api/reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.review-box {
+  font-family: 'Zilla Slab', serif;
+  border: 2px solid #651601;
+  margin: 10px 10px 20px 10px;
+  padding: 20px;
+  box-shadow: 2px 3px 3px #651601;
+  border-radius: 10px;
+}
+
+
+.review-box h1 {
+  // border: 1px solid black;
+  color: #651601;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+
+.indiv-review h2 {
+  font-size: 28px;
+  padding-bottom: 10px;
+  font-weight: 800;
+}
+
+.indiv-review h3 {
+  font-size: 23px;
+  padding-bottom: 10px;
+}
+
+.indiv-review p {
+  font-size: 20px;
+}
+
+
+.indiv-review {
+  margin: 5px 10px 30px 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.icon {
+  border: 1px solid black;
+  padding: 15px;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content:space-between;
+  // margin-top: 5px;
+}
+
+img.icon {
+  border: 1px solid black;
+  // display: flex;
+  // align-items: center;
+  width:120px;
+  height: 120px;
+
+}
+
+.review-first-box {
+  // border: 1px solid black;
+  flex: 2;
+  padding: 15px 30px 15px 50px;
+}
+.review-second-box {
+  // border: 1px solid black;
+  flex: 1;
+  padding: 15px 30px 15px 30px;
+}

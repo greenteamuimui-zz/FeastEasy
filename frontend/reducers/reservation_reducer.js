@@ -7,8 +7,6 @@ const reservationReducer = (state = null, action) => {
   newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_RESERVATION:
-    console.log(state);
-    console.log(action);
     newState = action.reservation;
     return newState;
     case RECEIVE_RESERVATIONS:
