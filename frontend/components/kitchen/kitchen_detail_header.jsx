@@ -41,19 +41,19 @@ const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
           </div>
           <div className='kitchen-details'>
             <h2>Party Details</h2>
-            <h3>Dinner Time</h3>
+            <h3><i className="material-icons">access_time</i>Dinner Time</h3>
             <p>
               {kitchen.feast_time}
             </p>
-            <h3>Seatings</h3>
+            <h3><i className="material-icons">event_seat</i>Seatings</h3>
             <p>
               {kitchen.size}
             </p>
-            <h3>Phone</h3>
+            <h3><i className="material-icons">phone</i>Phone</h3>
             <p>
               {kitchen.phone}
             </p>
-            <h3>Address</h3>
+            <h3><i className="material-icons">map</i>Address</h3>
             <p>
               {kitchen.address}
             </p>

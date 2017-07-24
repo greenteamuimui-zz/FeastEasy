@@ -14,32 +14,34 @@ div.kitchen-show {
   // border: 1px solid #601A13;
   border-radius: 10px;
   box-shadow: 3px 3px 3px #601A13;
-  // background-color: #5C121B;
   background: -webkit-linear-gradient(right, #FFA473 , #BE3021);
 }
 
 .kitchen-content {
+  // border: 5px solid black;
+  margin: auto;
   display: flex;
-}
-
-.kitchen-right {
-  flex:1;
-}
-
-.kitchen-content {
-  // border: 5px solid green;
   position: absolute;
-  top: 50px;
+  top: 25%;
   left: 5%;
   width: 90%
 }
 
+.kitchen-left {
+  border: 1px solid green;
+}
+
+.kitchen-right {
+  border: 1px solid red;
+  width: 100%
+  // flex:1;
+}
+
+
+
 .kitchen-header-content {
   // border: 2px solid red;
-  height: 145px;
   font-size: 25px;
-  position: relative;
-  width: 100%;
   padding-left: 15px;
   color:white;
 }
@@ -64,19 +66,21 @@ div.kitchen-show {
 
 .kitchen-header-content button {
   position: absolute;
-  bottom: 20px;
+  top: 100px;
   right:10px;
 }
 
 .kitchen-info {
+  border: 2px solid black;
   margin-top: 20px;
-  // border: 2px solid black;
   display: flex;
 }
 
 .right-first-box {
-  // border: 2px solid blue;
-  flex:1;
+  border: 2px solid blue;
+  // max-width: 1060;
+  // flex:2;
+  // width: 70%;
 }
 
 .kitchen-about {
@@ -104,13 +108,13 @@ div.kitchen-show {
 .kitchen-details {
   // position: fixed;
   // top:275px;
-  border: 2px solid grey;
-  width: 220px;
-  margin: 10px;
+  border: 2px solid black;
+  // min-width: 250px;
+  // margin: 10px;
   padding: 10px;
   box-shadow: 3px 3px 3px grey;
   border-radius: 10px;
-  // height: 200px;
+  height: 100%;
 }
 
 .kitchen-details h2 {
@@ -139,8 +143,8 @@ div.kitchen-show {
 }
 
 .pic-box {
-  width:350px;
-  height: 250px;
+  width:200px;
+  height: 150px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -154,5 +158,5 @@ div.kitchen-show {
   border-radius: 10px;
   // padding: 5px;
   height: auto;
-  width: 400px;
+  width: 250px;
 }

@@ -32,7 +32,10 @@ class ReviewForm extends React.Component {
   renderErrors() {
     return (
       <p className="errors">
-        {this.props.errors[0]}
+        {Object.values(this.props.errors).map((error, idx) =>
+          <li key={idx}>
+          {error}
+          </li>)}
       </p>
     );
   }
@@ -62,7 +65,7 @@ class ReviewForm extends React.Component {
         onChange={this.updateState('body')} />
       <div className="radio-ratings">
         <div className="radio-food">
-          <h3>Food:</h3>
+          <h3><i className="material-icons">restaurant_menu</i>Food:</h3>
           <input type="radio" value="1"
             checked={this.state.food_score === "1"}
             onChange={this.updateState('food_score')} />
@@ -81,7 +84,7 @@ class ReviewForm extends React.Component {
         </div>
 
         <div className="radio-atmosphere">
-          <h3>Atmosphere:</h3>
+          <h3><i className="material-icons">palette</i>Atmosphere:</h3>
           <input type="radio" value="1"
             checked={this.state.atmosphere_score === "1"}
             onChange={this.updateState('atmosphere_score')} />
@@ -100,7 +103,7 @@ class ReviewForm extends React.Component {
         </div>
 
         <div className="radio-host">
-          <h3>Host:</h3>
+          <h3><i className="material-icons">face</i>Host:</h3>
           <input type="radio" value="1"
             checked={this.state.host_score === "1"}
             onChange={this.updateState('host_score')} />
@@ -119,7 +122,7 @@ class ReviewForm extends React.Component {
         </div>
 
         <div className="radio-price">
-          <h3>Price:</h3>
+          <h3><i className="material-icons">attach_money</i>Price:</h3>
           <input type="radio" value="1"
             checked={this.state.price_score === "1"}
             onChange={this.updateState('price_score')} />

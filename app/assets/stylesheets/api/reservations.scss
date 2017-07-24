@@ -21,11 +21,10 @@
 
 
 .reservation-box h3 {
-  color:c;
-  text-align: baseline;
+  color:#861A27;
   // border: 2px solid black;
-  padding: 10px;
-  font-size: 20px;
+  padding: 15px 5px 15px 5px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -44,8 +43,9 @@
   border-radius: 5px;
   border: 2px solid grey;
   box-shadow: 2px 2px 2px grey;
+  box-sizing: border-box;
   margin: auto;
-  width: 650px;
+  width: 600px;
   display: flex;
   justify-content: center;
   margin-bottom: 35px;

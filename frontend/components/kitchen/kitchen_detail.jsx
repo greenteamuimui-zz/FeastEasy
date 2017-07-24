@@ -58,7 +58,7 @@ class KitchenDetail extends React.Component {
       <div className="kitchen-show">
         <h1 className="white"> </h1>
         <div className= "kitchen-content">
-          <section className="kitchen-left">
+          <div className="kitchen-left">
             <ul className="kitchen-pics">
               {picComponent}
             </ul>
@@ -67,7 +67,7 @@ class KitchenDetail extends React.Component {
               <a>reservation</a>
               <a>review</a>
             </div>
-          </section>
+          </div>
           <KitchenDetailHeader kitchen={kitchen} city={city} />
         </div>
       </div>

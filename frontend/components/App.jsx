@@ -9,7 +9,7 @@ import SearchBar from './header/searchbar';
 // <img className="main" src="http://res.cloudinary.com/greenteamuimui/image/upload/c_scale,r_30,w_1182/v1500496835/imageedit_5_8288987673_i4iq3j.png" alt="main"/>
 
 const App = () => (
-  <div>
+  <div className='app'>
     <div className="static">
     <header className="app-header">
       <div className="app-left">

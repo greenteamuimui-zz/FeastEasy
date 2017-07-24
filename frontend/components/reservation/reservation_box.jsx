@@ -62,7 +62,7 @@ class ReservationBox extends React.Component {
       <div className="reservation-box">
         <h2>Make A Reservation</h2>
         <form className="reservation-form" onSubmit={this.handleSubmit}>
-        <h3>Select a Date:</h3>
+        <h3>Select Date:</h3>
         <input className="date-selector" type="date"
           value={this.state.date}
           onChange={this.updateState("date")}

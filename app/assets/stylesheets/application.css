@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ .app {
+   max-width: 1600px;
+   margin: auto;
+ }
