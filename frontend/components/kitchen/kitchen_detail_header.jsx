@@ -36,8 +36,10 @@ const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
               </p>
             </div>
             <ReservationBoxContainer kitchenSize={kitchen.size} />
-            <ReviewBoxContainer />
-            <ReviewFormContainer />
+            <div className="review-section">
+              <ReviewBoxContainer />
+              <ReviewFormContainer />
+            </div>
           </div>
           <div className='kitchen-details'>
             <h2>Party Details</h2>

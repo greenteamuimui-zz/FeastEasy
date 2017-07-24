@@ -53,19 +53,21 @@ class ReviewForm extends React.Component {
       return null;
     }
     return (
-    <div>
-      <header>Submit A Review</header>
+    <div className='review-form-box'>
+      <h1>Submit A Review</h1>
       {this.renderErrors()}
       <form className="review-form" onSubmit={this.handleSubmit}>
-      <h2>Title</h2>
-        <input className="input" type="text" value={this.state.title}
-        onChange={this.updateState('title')} />
-      <h3>Body</h3>
-        <input className="input" type="text" value={this.state.body}
-        onChange={this.updateState('body')} />
-      <div className="radio-ratings">
+      <div className="review-form-left">
+        <h2>Title</h2>
+          <input className="input" type="text" value={this.state.title}
+          onChange={this.updateState('title')} />
+        <h3>Body</h3>
+          <textarea className="input-body" type="text" value={this.state.body}
+          onChange={this.updateState('body')} />
+      </div>
+      <div className="review-form-right">
         <div className="radio-food">
-          <h3><i className="material-icons">restaurant_menu</i>Food:</h3>
+          <h4><i className="material-icons">restaurant_menu</i>Food:
           <input type="radio" value="1"
             checked={this.state.food_score === "1"}
             onChange={this.updateState('food_score')} />
@@ -81,10 +83,11 @@ class ReviewForm extends React.Component {
           <input type="radio" value="5"
             checked={this.state.food_score === "5"}
             onChange={this.updateState('food_score')} />
+          </h4>
         </div>
 
         <div className="radio-atmosphere">
-          <h3><i className="material-icons">palette</i>Atmosphere:</h3>
+          <h4><i className="material-icons">palette</i>Atmosphere:
           <input type="radio" value="1"
             checked={this.state.atmosphere_score === "1"}
             onChange={this.updateState('atmosphere_score')} />
@@ -100,10 +103,11 @@ class ReviewForm extends React.Component {
           <input type="radio" value="5"
             checked={this.state.atmosphere_score === "5"}
             onChange={this.updateState('atmosphere_score')} />
+          </h4>
         </div>
 
         <div className="radio-host">
-          <h3><i className="material-icons">face</i>Host:</h3>
+          <h4><i className="material-icons">face</i>Host:
           <input type="radio" value="1"
             checked={this.state.host_score === "1"}
             onChange={this.updateState('host_score')} />
@@ -119,10 +123,11 @@ class ReviewForm extends React.Component {
           <input type="radio" value="5"
             checked={this.state.host_score === "5"}
             onChange={this.updateState('host_score')} />
+          </h4>
         </div>
 
         <div className="radio-price">
-          <h3><i className="material-icons">attach_money</i>Price:</h3>
+          <h4><i className="material-icons">attach_money</i>Price:
           <input type="radio" value="1"
             checked={this.state.price_score === "1"}
             onChange={this.updateState('price_score')} />
@@ -138,6 +143,7 @@ class ReviewForm extends React.Component {
           <input type="radio" value="5"
             checked={this.state.price_score === "5"}
             onChange={this.updateState('price_score')} />
+          </h4>
         </div>
       </div>
       <input className="submit-button" type="submit" value="Submit" />
