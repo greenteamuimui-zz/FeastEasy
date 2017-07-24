@@ -46,13 +46,12 @@ class ReservationBox extends React.Component {
 
 
   render () {
-    console.log(this.props);
-    console.log(this.props.reservation);
+    // console.log(this.props);
+    // console.log(this.props.reservation);
     let message = "";
     let kitchenSize = this.props.kitchenSize;
     if (this.props.reservation === null ) {
       message = "Join the Party...";
-      console.log(message);
     } else if (Object.keys(this.props.reservation).length === 0) {
       message = "Sorry, it's full!";
     } else {

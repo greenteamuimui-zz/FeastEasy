@@ -19,7 +19,7 @@ export const fetchReviews = (kitchenId, date) => (dispatch) => {
   return (
     ReviewAPIUtil.fetchReviews(kitchenId, date).then(
       reviews => {
-      dispatch(receiveReview(reviews));
+      dispatch(receiveReviews(reviews));
       dispatch(ErrorsAction.clearErrors());
     },
       error => dispatch(ErrorsAction.receiveErrors(error.responseJSON))

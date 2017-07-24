@@ -27,6 +27,12 @@ class ReviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createReview(this.state);
+    this.setState({title: "",
+    body: "",
+    food_score: "1",
+    atmosphere_score: "1",
+    host_score: "1",
+    price_score: "1",});
   }
 
   renderErrors() {
@@ -48,7 +54,7 @@ class ReviewForm extends React.Component {
 
 
   render () {
-    console.log(this.props);
+    // console.log(this.props);
     if (this.props.review === null) {
       return null;
     }
@@ -66,6 +72,26 @@ class ReviewForm extends React.Component {
           onChange={this.updateState('body')} />
       </div>
       <div className="review-form-right">
+        <div className="radio-atmosphere">
+          <h4><i className="material-icons">palette</i>Atmosphere:
+            <input type="radio" value="1"
+              checked={this.state.atmosphere_score === "1"}
+              onChange={this.updateState('atmosphere_score')} />
+            <input type="radio" value="2"
+              checked={this.state.atmosphere_score === "2"}
+              onChange={this.updateState('atmosphere_score')} />
+            <input type="radio" value="3"
+              checked={this.state.atmosphere_score === "3"}
+              onChange={this.updateState('atmosphere_score')} />
+            <input type="radio" value="4"
+              checked={this.state.atmosphere_score === "4"}
+              onChange={this.updateState('atmosphere_score')} />
+            <input type="radio" value="5"
+              checked={this.state.atmosphere_score === "5"}
+              onChange={this.updateState('atmosphere_score')} />
+          </h4>
+        </div>
+
         <div className="radio-food">
           <h4><i className="material-icons">restaurant_menu</i>Food:
           <input type="radio" value="1"
@@ -86,25 +112,6 @@ class ReviewForm extends React.Component {
           </h4>
         </div>
 
-        <div className="radio-atmosphere">
-          <h4><i className="material-icons">palette</i>Atmosphere:
-          <input type="radio" value="1"
-            checked={this.state.atmosphere_score === "1"}
-            onChange={this.updateState('atmosphere_score')} />
-          <input type="radio" value="2"
-            checked={this.state.atmosphere_score === "2"}
-            onChange={this.updateState('atmosphere_score')} />
-          <input type="radio" value="3"
-            checked={this.state.atmosphere_score === "3"}
-            onChange={this.updateState('atmosphere_score')} />
-          <input type="radio" value="4"
-            checked={this.state.atmosphere_score === "4"}
-            onChange={this.updateState('atmosphere_score')} />
-          <input type="radio" value="5"
-            checked={this.state.atmosphere_score === "5"}
-            onChange={this.updateState('atmosphere_score')} />
-          </h4>
-        </div>
 
         <div className="radio-host">
           <h4><i className="material-icons">face</i>Host:
@@ -145,8 +152,8 @@ class ReviewForm extends React.Component {
             onChange={this.updateState('price_score')} />
           </h4>
         </div>
+        <input className="submit-button" type="submit" value="Submit" />
       </div>
-      <input className="submit-button" type="submit" value="Submit" />
       </form>
     </div>
     );

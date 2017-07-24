@@ -20,7 +20,7 @@ const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
             {city}
           </h2>
           <h3>
-            Overall Score: {kitchen.overall_score}
+            Overall Score: {kitchen.overall_score.toFixed(2)}
           </h3>
           <button onClick={addFavorite}>
             Favorite
@@ -42,14 +42,14 @@ const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
             </div>
           </div>
           <div className='kitchen-details'>
-            <h2>Party Details</h2>
+            <h2>Dinner Details</h2>
             <h3><i className="material-icons">access_time</i>Dinner Time</h3>
             <p>
               {kitchen.feast_time}
             </p>
             <h3><i className="material-icons">event_seat</i>Seatings</h3>
             <p>
-              {kitchen.size}
+              {kitchen.size} Max
             </p>
             <h3><i className="material-icons">phone</i>Phone</h3>
             <p>

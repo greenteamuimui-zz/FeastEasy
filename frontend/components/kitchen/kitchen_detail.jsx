@@ -19,12 +19,11 @@ class KitchenDetail extends React.Component {
     }
   }
 
-  // componentWillReceiveProps(newProps) {
-  //   console.log(newProps);
-  //   if (this.props !== this.newProps) {
-  //     this.newProps.fetchKitchen(this.newProps.match.params.kitchenId);
-  //   }
-  // }
+  componentWillReceiveProps(newProps) {
+    if (this.props.match.params.kitchenId !== newProps.match.params.kitchenId) {
+    newProps.fetchKitchen(newProps.match.params.kitchenId);
+    }
+  }
 
   getCityName() {
     this.setState({city: this.props.city[this.props.kitchen.city_id]});

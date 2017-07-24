@@ -28,11 +28,11 @@ div.kitchen-show {
 }
 
 .kitchen-left {
-  border: 1px solid green;
+  // border: 1px solid green;
 }
 
 .kitchen-right {
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 100%
   // flex:1;
 }
@@ -71,16 +71,16 @@ div.kitchen-show {
 }
 
 .kitchen-info {
-  border: 2px solid black;
+  // border: 2px solid black;
   margin-top: 20px;
   display: flex;
 }
 
 .right-first-box {
-  border: 2px solid blue;
+  // border: 2px solid blue;
   // max-width: 1060;
   // flex:2;
-  // width: 70%;
+  width: 80%;
 }
 
 .kitchen-about {
@@ -110,7 +110,7 @@ div.kitchen-show {
   // top:275px;
   border: 2px solid black;
   // min-width: 250px;
-  // margin: 10px;
+  margin-top: 10px;
   padding: 10px;
   box-shadow: 3px 3px 3px grey;
   border-radius: 10px;

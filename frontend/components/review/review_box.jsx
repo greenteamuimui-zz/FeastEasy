@@ -13,6 +13,11 @@ class ReviewBox extends React.Component {
     this.props.fetchReviews(this.props.match.params.kitchenId);
   }
 
+  componentWillReceiveProps(newProps) {
+    if (this.props.match.params.kitchenId !== newProps.match.params.kitchenId) {
+    newProps.fetchReviews(newProps.match.params.kitchenId);
+    }
+  }
 
   render () {
     console.log(this.props);

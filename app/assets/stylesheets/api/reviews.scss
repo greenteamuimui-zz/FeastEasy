@@ -23,6 +23,10 @@
 
 li {
   list-style: none;
+  color: #982e2e;
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .review-section h1 {
@@ -106,29 +110,54 @@ img.icon {
 // styling for the submit-review form (font size and colors are from above)
 .review-form-box {
   border: 2px solid black;
+  margin:10px;
+  padding:20px;
+  border: 2px solid #651601;
+  box-shadow: 2px 3px 3px #651601;
+  border-radius: 10px;
 }
 
 .review-form{
-  padding: 20px;
-  justify-content: space-between;
+  padding: 10px;
+  justify-content: space-around;
   border: 1px solid black;
   display:flex;
   position: relative;
+  border: 2px solid #651601;
+  box-shadow: 2px 3px 3px #651601;
+  border-radius: 10px;
+  margin: 10px;
 }
 
 .input-body {
   height:100px;
-  width:300px;
+  width:100%;
 }
 
 .review-form-box .input {
-  width:300px;
+  width:100%;
 }
+
+.review-form-right {
+  // border: 2px solid black;
+  text-align: right;
+  padding-top: 40px;
+  flex: 1.2;
+  padding-right: 20px;
+}
+
+.review-form-left {
+  // border: 2px solid black;
+  padding: 10px;
+  flex:1;
+}
+
 
 .review-form input[type=submit] {
   position: relative;
-  right: 0px;
-  top: 180px;
+  height:auto;
+  right: -10px;
+  top: 10px;
 }
 
 input[type="radio"] {
@@ -143,8 +172,4 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   background-position: 30px 30px;
-}
-
-input[type="radio"]:hover {
-  color: pink;
 }
