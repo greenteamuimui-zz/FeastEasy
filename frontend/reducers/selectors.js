@@ -14,3 +14,11 @@ export const selectAllReviews = ({review}) => {
     return values(review);
   }
 };
+
+export const selectSingleKitchen = ({kitchen}, kitchenId) => {
+  if (kitchen === null) {
+    return null;
+  } else {
+    return kitchen[kitchenId];
+  }
+};

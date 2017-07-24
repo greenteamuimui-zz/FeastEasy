@@ -4,10 +4,15 @@ import {fetchCities} from '../../actions/city_actions';
 import {clearErrors} from '../../actions/errors_actions';
 import KitchenDetail from './kitchen_detail';
 import { withRouter } from 'react-router-dom';
+import { selectSingleKitchen } from '../../reducers/selectors';
 
-const mapStatetoProps = (state) => {
+
+const mapStatetoProps = (state, ownProps) => {
+  console.log(state);
+  console.log(ownProps);
   return {
-    kitchen: state.kitchen,
+    // kitchen: state.kitchen,
+    kitchen: selectSingleKitchen(state, ownProps.match.params.kitchenId),
     // city: state.city
   };
 };

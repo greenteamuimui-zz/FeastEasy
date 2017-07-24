@@ -4,6 +4,7 @@ Kitchen.destroy_all
 Reservation.destroy_all
 Picture.destroy_all
 Review.destroy_all
+Favorite.destroy_all
 
 u1 = User.create(username: "Cherry", email:"cherry@gmail.com", password:"123456")
 u2 = User.create(username: "Ilya", email:"ilya@gmail.com", password:"654321")
@@ -78,3 +79,6 @@ r2 = Review.create!(kitchen_id: k1.id, user_id: u2.id, title:"I love it!", body:
 r3 = Review.create!(kitchen_id: k2.id, user_id: u1.id, title:"Need to make friends with Ilya!", body:"The way you drink with the best folks!", food_score:3, atmosphere_score: 3, host_score: 4, price_score: 4)
 r4 = Review.create!(kitchen_id: k2.id, user_id: u3.id, title:"The Russian way of drinking vodka!", body:"Best home cook russian food ever!", food_score:4, atmosphere_score: 4, host_score: 5, price_score: 3)
 r5 = Review.create!(kitchen_id: k3.id, user_id: u1.id, title:"Good old time!", body:"Who doesn't love drinking beer in a nice secluded backyard!", food_score:3, atmosphere_score: 4, host_score: 4, price_score: 3)
+
+f1 = Favorite.create!(kitchen_id: k1.id, user_id:u2.id)
+f2 = Favorite.create!(kitchen_id: k2.id, user_id:u1.id)
