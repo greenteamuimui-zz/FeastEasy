@@ -2,6 +2,8 @@ User.destroy_all
 City.destroy_all
 Kitchen.destroy_all
 Reservation.destroy_all
+Picture.destroy_all
+Review.destroy_all
 
 u1 = User.create(username: "Cherry", email:"cherry@gmail.com", password:"123456")
 u2 = User.create(username: "Ilya", email:"ilya@gmail.com", password:"654321")
@@ -54,6 +56,22 @@ p6 = Picture.create!(kitchen_id: k2.id, image_url: "http://res.cloudinary.com/gr
 p7 = Picture.create!(kitchen_id: k3.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500571065/k3-p1_uln9ta.jpg")
 p8 = Picture.create!(kitchen_id: k3.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500571066/k3-p2_iif2df.jpg")
 p9 = Picture.create!(kitchen_id: k3.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500571067/k3-p3_expq2w.jpg")
+
+p10 = Picture.create!(kitchen_id: k5.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877198/k5-p1_bd61qq.jpg")
+p11 = Picture.create!(kitchen_id: k5.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877201/k5-p2_kmjach.jpg")
+p12 = Picture.create!(kitchen_id: k5.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877201/k5-p3_hbbkfj.jpg")
+p13 = Picture.create!(kitchen_id: k6.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877274/k6-p1_hjdtue.jpg")
+p14 = Picture.create!(kitchen_id: k6.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877275/k6-p2_n2q5lt.jpg")
+p15 = Picture.create!(kitchen_id: k6.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877332/k6-p3_mt0u78.jpg")
+p16 = Picture.create!(kitchen_id: k7.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877626/k7-p1_ooda8p.jpg")
+p17 = Picture.create!(kitchen_id: k7.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877628/k7-p2_e2zucb.jpg")
+p18 = Picture.create!(kitchen_id: k7.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877628/k7-p3_if6ach.jpg")
+p19 = Picture.create!(kitchen_id: k8.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500913184/k8-p1_y3ityd.png")
+p20 = Picture.create!(kitchen_id: k8.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500913184/k8-p2_aacavn.jpg")
+p21 = Picture.create!(kitchen_id: k8.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500913185/k8-p3_sblmhi.jpg")
+p22 = Picture.create!(kitchen_id: k9.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500913399/k9-p1_huw4qx.jpg")
+p23 = Picture.create!(kitchen_id: k9.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500913400/k9-p2_xxjau4.jpg")
+p24 = Picture.create!(kitchen_id: k9.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500913402/k9-p3_bahnif.jpg")
 
 r1 = Review.create!(kitchen_id: k1.id, user_id: u3.id, title:"Great Asian Food!", body:"Awesome host, great convos, delicious food, I am so digging it!", food_score:4, atmosphere_score: 4, host_score: 5, price_score: 3)
 r2 = Review.create!(kitchen_id: k1.id, user_id: u2.id, title:"I love it!", body:"Cherry knows her asian food, the culture, the food, the drinks!", food_score:3, atmosphere_score: 4, host_score: 4, price_score: 4)

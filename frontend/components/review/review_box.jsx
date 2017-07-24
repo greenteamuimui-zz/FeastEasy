@@ -20,7 +20,6 @@ class ReviewBox extends React.Component {
   }
 
   render () {
-    console.log(this.props);
     if (this.props.review === null) {
       return null;
     }

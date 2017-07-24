@@ -8,7 +8,7 @@ import { withRouter } from 'react-router-dom';
 const mapStatetoProps = (state) => {
   return {
     kitchen: state.kitchen,
-    city: state.city
+    // city: state.city
   };
 };
 
@@ -16,7 +16,7 @@ const mapStatetoProps = (state) => {
 const mapDispatchtoProps = (dispatch) => {
   return {
   fetchKitchen: (kitchenId) => dispatch(fetchKitchen(kitchenId)),
-  fetchCities: () => dispatch(fetchCities()),
+  // fetchCities: () => dispatch(fetchCities()),
   clearErrors: () => dispatch(clearErrors())
   };
 };

@@ -5,6 +5,9 @@
     overall_score += review.overall_score
     total_num += 1
   end
+  if total_num == 0
+    total_num += 1
+  end
 
   json.set! kitchen.id do
     json.extract! kitchen, :id, :user_id, :name, :cuisine, :city_id, :size, :feast_time, :address, :phone, :about

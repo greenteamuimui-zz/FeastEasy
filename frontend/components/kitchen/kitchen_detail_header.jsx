@@ -3,7 +3,11 @@ import { Link, withRouter } from 'react-router-dom';
 import ReservationBoxContainer from '../reservation/reservation_box_container';
 import ReviewBoxContainer from '../review/review_box_container';
 import ReviewFormContainer from '../review/review_form_container';
+import FavoriteButtonContainer from '../favorite/favorite_button_container';
 
+// <button onClick={addFavorite}>
+//   Favorite
+// </button>
 
 const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
 
@@ -22,9 +26,9 @@ const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
           <h3>
             Overall Score: {kitchen.overall_score.toFixed(2)}
           </h3>
-          <button onClick={addFavorite}>
-            Favorite
-          </button>
+          <div className="favorite">
+            <FavoriteButtonContainer />
+          </div>
         </div>
 
         <div className="kitchen-info">

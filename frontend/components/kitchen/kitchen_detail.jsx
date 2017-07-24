@@ -6,17 +6,17 @@ import ReservationBoxContainer from '../reservation/reservation_box_container';
 class KitchenDetail extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {
-      city: ""
-    };
-    this.getCityName = this.getCityName.bind(this);
+    // this.state = {
+    //   city: ""
+    // };
+    // this.getCityName = this.getCityName.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchKitchen(this.props.match.params.kitchenId);
-    if (!(this.props.city === null)) {
-      this.getCityName();
-    }
+    // if (!(this.props.city === null)) {
+    //   this.getCityName();
+    // }
   }
 
   componentWillReceiveProps(newProps) {
@@ -25,24 +25,24 @@ class KitchenDetail extends React.Component {
     }
   }
 
-  getCityName() {
-    this.setState({city: this.props.city[this.props.kitchen.city_id]});
-  }
+  // getCityName() {
+  //   this.setState({city: this.props.city[this.props.kitchen.city_id]});
+  // }
 
-  componentWillMount() {
-    this.props.fetchCities();
-  }
+  // componentWillMount() {
+  //   this.props.fetchCities();
+  // }
 
 
+  // if (!this.props.city) {
+  //   return null;
+  // }
   render () {
     if (!this.props.kitchen) {
       return null;
     }
-    if (!this.props.city) {
-      return null;
-    }
     let kitchen = this.props.kitchen;
-    let city = this.props.city[this.props.kitchen.city_id].name;
+    let city = this.props.kitchen.city_name;
     let pictures = Object.values(kitchen.image_url);
     let picComponent = pictures.map((picture, idx) => {
       return (

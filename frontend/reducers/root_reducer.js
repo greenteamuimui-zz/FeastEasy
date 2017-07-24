@@ -5,6 +5,7 @@ import kitchenReducer from './kitchen_reducer';
 import reservationReducer from './reservation_reducer';
 import cityReducer from './city_reducer';
 import reviewReducer from './review_reducer';
+import favoriteReducer from './favorite_reducer';
 
 const rootReducer = combineReducers({
   currentUser: currentUserReducer,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
   kitchen: kitchenReducer,
   reservation: reservationReducer,
   city: cityReducer,
-  review: reviewReducer
+  review: reviewReducer,
+  favorite: favoriteReducer
 });
 
 export default rootReducer;
