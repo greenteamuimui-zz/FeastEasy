@@ -15,7 +15,8 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "webpack": "^3.3.0",
-    "react-modal": "latest"
+    "react-modal": "latest",
+    "lodash":"latest"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
