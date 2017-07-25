@@ -41,7 +41,6 @@ class KitchenDetail extends React.Component {
     if (!this.props.kitchen) {
       return null;
     }
-    console.log(this.props);
     let kitchen = this.props.kitchen;
     let city = this.props.kitchen.city_name;
     let favorites = this.props.kitchen.favorite_id;

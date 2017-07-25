@@ -66,9 +66,11 @@ class FavoriteButton extends React.Component {
     // console.log(this.state);
     let button;
     if (this.state.favorited === false) {
-      button = <button onClick={this.handleSubmit}><i className="material-icons">favorite_border</i>Add</button>;
+      button = <div className="favorite" onClick={this.handleSubmit}>
+              <i className="material-icons">favorite_border</i><h3>Favorite</h3>
+              </div>;
     } else {
-      button = <button onClick={this.handleSubmit}><i className="material-icons">favorite</i>Delete</button>;
+      button = <div className="favorite" onClick={this.handleSubmit}><i className="material-icons">favorite</i><h3>Favorite</h3></div>;
     }
       return (
         <div>
@@ -77,5 +79,10 @@ class FavoriteButton extends React.Component {
       );
   }
 }
+// if (this.state.favorited === false) {
+//   button = <button onClick={this.handleSubmit}><i className="material-icons">favorite_border</i><h3>Favorite</h3></button>;
+// } else {
+//   button = <button onClick={this.handleSubmit}><i className="material-icons">favorite</i><h3>Favorite</h3></button>;
+// }
 
 export default FavoriteButton;

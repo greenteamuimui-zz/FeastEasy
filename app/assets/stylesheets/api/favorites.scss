@@ -1,3 +1,38 @@
 // Place all the styles related to the Api/favorites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div.favorite {
+  position: absolute;
+  top: 100px;
+  right:10px;
+  // border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+div.favorite i {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  // border: 1px solid black;
+
+}
+
+div.favorite h3{
+  padding:5px 5px 5px 0px;
+  font-weight: 600;
+  // border: 1px solid black;
+
+}
+
+div.favorite i:hover {
+  cursor: pointer;
+  -webkit-transform:scale(1.5); /* Safari and Chrome */
+  -moz-transform:scale(1.5); /* Firefox */
+  -ms-transform:scale(1.5); /* IE 9 */
+   transform:scale(1.5);
+}
+
+div.favorite i:active {
+  text-shadow: 1px 1px 1px;
+  }

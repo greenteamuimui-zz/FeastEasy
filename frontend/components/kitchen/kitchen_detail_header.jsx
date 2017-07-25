@@ -25,7 +25,7 @@ const KitchenDetailHeader = ({kitchen, city}) => {
           <h3>
             Overall Score: {kitchen.overall_score.toFixed(2)}
           </h3>
-          <div className="favorite">
+          <div>
             <FavoriteButtonContainer kitchen={kitchen}/>
           </div>
         </div>
