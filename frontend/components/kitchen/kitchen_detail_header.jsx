@@ -9,8 +9,7 @@ import FavoriteButtonContainer from '../favorite/favorite_button_container';
 //   Favorite
 // </button>
 
-const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
-
+const KitchenDetailHeader = ({kitchen, city}) => {
   return (
       <div className='kitchen-right'>
         <div className="kitchen-header-content">
@@ -27,7 +26,7 @@ const KitchenDetailHeader = ({kitchen, city, addFavorite}) => {
             Overall Score: {kitchen.overall_score.toFixed(2)}
           </h3>
           <div className="favorite">
-            <FavoriteButtonContainer />
+            <FavoriteButtonContainer kitchen={kitchen}/>
           </div>
         </div>
 

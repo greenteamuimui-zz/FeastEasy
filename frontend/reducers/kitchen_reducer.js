@@ -1,4 +1,7 @@
 import {RECEIVE_KITCHEN, RECEIVE_KITCHENS} from '../actions/kitchen_actions';
+import {RECEIVE_FAVORITE} from '../actions/favorite_actions';
+import merge from 'lodash/merge';
+
 
 
 const kitchenReducer = (state = null, action) => {
@@ -12,6 +15,8 @@ const kitchenReducer = (state = null, action) => {
     case RECEIVE_KITCHENS:
     newState = action.kitchens;
       return newState;
+    case RECEIVE_FAVORITE:
+    return Object.assign({}, newState, {favorite_id: action.favorite.favorite});
     default:
       return state;
   }

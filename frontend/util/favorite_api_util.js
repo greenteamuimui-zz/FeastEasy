@@ -13,11 +13,12 @@ export const removeFavorite = (kitchenId, userId) => {
   return (
     $.ajax({
       method: 'DELETE',
-      url: `/api/favorites/?kitchenId=${kitchenId}&userId=${userId}`,
+      url: `/api/favorites/${kitchenId}`,
+      data: {user_id: userId}
     })
   );
 };
-
+// url: `/api/favorites/?kitchenId=${kitchenId}&userId=${userId}`,
 export const fetchFavorite = (kitchenId, userId) => {
   return (
     $.ajax({

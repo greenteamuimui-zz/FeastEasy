@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 
 const mapStatetoProps = (state) => {
   return {
-    favorite: state.favorite,
+    favArray: state.kitchen.favorite_id,
     currentUser: state.currentUser
   };
 };
@@ -15,7 +15,7 @@ const mapStatetoProps = (state) => {
 const mapDispatchtoProps = (dispatch) => {
   return {
   createFavorite: (favorite) => dispatch(createFavorite(favorite)),
-  fetchFavorite: (kitchenId, userId) => dispatch(fetchFavorite(kitchenId, userId)),
+  // fetchFavorite: (kitchenId, userId) => dispatch(fetchFavorite(kitchenId, userId)),
   removeFavorite: (kitchenId, userId) => dispatch(removeFavorite(kitchenId, userId)),
   clearErrors: () => dispatch(clearErrors())
   };

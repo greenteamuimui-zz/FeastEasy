@@ -16,5 +16,5 @@
       json.image_url picture.image_url
     end
   end
-  
+
 end

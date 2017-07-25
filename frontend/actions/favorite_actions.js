@@ -29,8 +29,8 @@ export const fetchFavorite = (kitchenId, userId) => (dispatch) => {
 export const removeFavorite = (kitchenId, userId) => (dispatch) => {
   return (
     FavoriteAPIUtil.removeFavorite(kitchenId, userId).then(
-      () => {
-      dispatch(receiveFavorite(null));
+      (favorite) => {
+      dispatch(receiveFavorite(favorite));
       dispatch(ErrorsAction.clearErrors());
     },
       error => dispatch(ErrorsAction.receiveErrors(error.responseJSON))
@@ -44,10 +44,3 @@ export const receiveFavorite = (favorite) => {
     favorite
   });
 };
-
-// export const receiveFavorite = (favorite) => {
-//   return ({
-//     type: RECEIVE_FAVORITE,
-//     favorite
-//   });
-// };

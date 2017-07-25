@@ -8,11 +8,9 @@ import { selectSingleKitchen } from '../../reducers/selectors';
 
 
 const mapStatetoProps = (state, ownProps) => {
-  console.log(state);
-  console.log(ownProps);
   return {
-    // kitchen: state.kitchen,
-    kitchen: selectSingleKitchen(state, ownProps.match.params.kitchenId),
+    kitchen: state.kitchen,
+    // kitchen: selectSingleKitchen(state, ownProps.match.params.kitchenId),
     // city: state.city
   };
 };

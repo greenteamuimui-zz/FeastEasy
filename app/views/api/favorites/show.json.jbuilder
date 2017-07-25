@@ -1,3 +1,3 @@
-json.favorite do
-  json.extract! @favorite, :kitchen_id, :user_id
-end
+  # json.extract! @favorite, :id, :kitchen_id, :user_id
+
+  json.extract! @favorite, :user_id

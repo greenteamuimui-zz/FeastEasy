@@ -6,5 +6,10 @@ class Kitchen < ApplicationRecord
   has_many :reservations
   has_many :reviews
   has_many :pictures
+  has_many :favorites
+
+  has_many :favorited_user,
+  through: :favorites,
+  source: :user
 
 end

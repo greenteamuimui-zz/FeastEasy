@@ -14,7 +14,7 @@ const rootReducer = combineReducers({
   reservation: reservationReducer,
   city: cityReducer,
   review: reviewReducer,
-  favorite: favoriteReducer
+  // favorite: favoriteReducer
 });
 
 export default rootReducer;
