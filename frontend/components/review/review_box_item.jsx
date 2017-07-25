@@ -5,7 +5,7 @@ import ReviewBoxContainer from '../reservation/reservation_box_container';
 
 const ReviewBoxItem = ({review}) => {
   let overall_score = Math.round(review.overall_score);
-  let img_path  = `/assets/score${overall_score}`;
+  let img_path  = `/assets/score${overall_score}.gif`;
   return (
     <div className="indiv-review">
       <div className="icon">
