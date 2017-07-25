@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import SearchFormContainer from './search_form_container';
 
 export default () => (
   <div className="search-bar">
@@ -11,6 +11,7 @@ export default () => (
       <h3>
         Find your favorite kitchen now...
       </h3>
+      <SearchFormContainer />
     </section>
   </div>
 );

@@ -3,7 +3,7 @@ export const fetchKitchens = (search) => {
     $.ajax({
       method: 'GET',
       url: '/api/kitchens',
-      data: search
+      data: {search}
     })
   );
 };

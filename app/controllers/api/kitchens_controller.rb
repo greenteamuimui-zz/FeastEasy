@@ -33,7 +33,10 @@ class Api::KitchensController < ApplicationController
   end
 
   def reservation_comparator(filtered_kitchens)
-    date = params[:search][:date]
+    date = Date.parse(params[:search][:date])
+    if date == ""
+      return render json: ["Please Select a Date"], status:422
+    end
     result = [];
     filtered_kitchens.each do |kitchen|
       total_seats = 0;

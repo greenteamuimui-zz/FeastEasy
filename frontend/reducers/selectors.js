@@ -22,3 +22,11 @@ export const selectSingleKitchen = ({kitchen}, kitchenId) => {
     return kitchen[kitchenId];
   }
 };
+
+export const selectAllCities = ({city}) => {
+  if (city === null) {
+    return null;
+  } else {
+    return values(city);
+  }
+};

@@ -1,0 +1,77 @@
+div.search-bar {
+  // border: 1px solid black;
+  position: relative;
+  background-image: url("http://res.cloudinary.com/greenteamuimui/image/upload/c_scale,r_30,w_1182/v1500496835/imageedit_5_8288987673_i4iq3j.png");
+  background-size: cover;
+  min-height: 600px;
+  font-family: 'Zilla Slab', serif;
+  // height: 100%;
+}
+
+div.search-bar section {
+  border-radius: 5px;
+  position: relative;
+  top: 450px;
+  left: 100px;
+  background-color: white;
+  width: 80%;
+  height: 250px;
+  border: 5px solid 999;
+  box-shadow: 2px 2px 2px #999;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+}
+
+div.search-bar h2 {
+  padding: 20px;
+  font-size:25px;
+}
+
+div.search-bar h3 {
+  font-size:20px;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.search-form {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 16px;
+   height: 100%;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+/* -------------------- Rounded Corners */
+.rounded {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+}
+
+
+/* -------------------- Colors: Background */
+.black   { background-color: beige; }
+
+/* -------------------- Colors: Text */
+.black select   { color: #651601; }
