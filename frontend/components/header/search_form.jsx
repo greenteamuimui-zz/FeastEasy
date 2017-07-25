@@ -56,24 +56,23 @@ class SearchForm extends React.Component {
       <div>
         {this.renderErrors()}
         <form className="search-form" onSubmit={this.handleSubmit}>
-          <h2>City</h2>
+          <h3>City:</h3>
           <div className="styled-select black rounded">
             <select value={this.state.city_id} onChange={this.updateState('city_id')}>
             {cities.map((city,  idx) => <option key={idx} value={city.id}>{city.name}</option>)}
             </select>
           </div>
-          <h2>Select Date:</h2>
+          <h3>Date:</h3>
           <input className="date-selector" type="date"
             value={this.state.date}
             onChange={this.updateState("date")}
             />
-          <h2>Seats</h2>
+          <h3>Seats:</h3>
           <input className="seats-selector" type="number" min="1" max="12"
             value={this.state.size}
             onChange={this.updateState("size")}
             />
-          <h2>Cuisine, Name</h2>
-          <input className="input" type="text" value={this.state.search_string}
+          <input className="string-input" type="text" value={this.state.search_string} placeholder="Cuisine, Name, etc.."
           onChange={this.updateState('search_string')} />
           <input className="submit-button" type="submit" value="Submit" />
         </form>

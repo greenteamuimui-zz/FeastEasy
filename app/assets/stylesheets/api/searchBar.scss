@@ -12,37 +12,64 @@ div.search-bar section {
   border-radius: 5px;
   position: relative;
   top: 450px;
-  left: 100px;
-  background-color: white;
-  width: 80%;
-  height: 250px;
-  border: 5px solid 999;
-  box-shadow: 2px 2px 2px #999;
-  border: 1px solid black;
+  // left: 100px;
+  margin: auto;
+  background-color: #FFF3F4;
+  width: 90%;
+  border: 2px solid white;
+  box-shadow: 3px 3px 3px grey;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
+  justify-content: space-around;
+}
+
+.string-input{
+  height: 100%;
+  font-size: 16px;
+  padding: 5px;
+  margin: auto;
+  width:150px;
 }
 
 div.search-bar h2 {
-  padding: 20px;
+  margin-top: auto;
+  margin-left: 20px;
+  padding: 20px 2px 20px 10px;
   font-size:25px;
+  font-weight: 700;
 }
 
 div.search-bar h3 {
-  font-size:20px;
+  font-size:18px;
   margin-left: 20px;
-  padding: 20px;
+  padding: 20px 2px 20px 10px;
+  margin-top: auto;
 }
 
 .search-form {
   width: 90%;
-  margin: auto;
-  padding: 10px;
-  border: 1px solid black;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  border: 1px solid white;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   height: 100%;
+}
+
+.seats-selector {
+  width:40px;
+  text-align: center;
+}
+
+.date-selector{
+  color: darkred;
+  width: 170px;
+  padding: 0px;
 }
 
 
@@ -50,14 +77,16 @@ div.search-bar h3 {
    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
    height: 29px;
    overflow: hidden;
-   width: 240px;
+   width: 150px;
+   margin: auto;
 }
 
 .styled-select select {
    background: transparent;
    border: none;
-   font-size: 16px;
+   font-size: 14px;
    height: 100%;
+  //  width: 100%;
    padding: 5px; /* If you add too much padding here, the options won't show in IE */
    width: 268px;
 }
@@ -71,7 +100,7 @@ div.search-bar h3 {
 
 
 /* -------------------- Colors: Background */
-.black   { background-color: beige; }
+.black   { background-color: #FFF3F4; }
 
 /* -------------------- Colors: Text */
 .black select   { color: #651601; }

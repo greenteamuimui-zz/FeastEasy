@@ -6,12 +6,12 @@ export default () => (
   <div className="search-bar">
     <section>
       <h2>
-        Join the next dinner party!
-      </h2>
-      <h3>
         Find your favorite kitchen now...
-      </h3>
+      </h2>
       <SearchFormContainer />
+      <div>
+        
+      </div>
     </section>
   </div>
 );
