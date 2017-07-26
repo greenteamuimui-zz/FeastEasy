@@ -33,7 +33,6 @@ class searchResults extends React.Component {
   // }
 
   componentDidMount() {
-    console.log("here");
     this.props.fetchKitchens(this.getSearch());
     if (this.props.cities === null) {
       this.props.fetchCities();
@@ -43,13 +42,13 @@ class searchResults extends React.Component {
       this.setState(this.props.search);
     }
   }
-
+// ( (!(this.props.cities === null)) || (!(this.props.search === null)) )
 // typeof(kitchens) === 'object'
   render() {
     let city = "";
     let kitchens = "";
     let kitchensMap = "";
-    if( (!(this.props.cities === null)) || (!(this.props.search === null)) ) {
+    if (!(this.props.cities === null)) {
       if (this.props.search.city_id === undefined) {
         city = this.props.cities[qs.parse(this.props.location.search)["cityId"]];
       } else {

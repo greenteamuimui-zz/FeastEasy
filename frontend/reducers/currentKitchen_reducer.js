@@ -8,8 +8,6 @@ const currentKitchenReducer = (state = null, action) => {
   newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_KITCHEN:
-    console.log(action);
-    console.log(state);
     newState = action.currentKitchen;
     return newState;
     case RECEIVE_FAVORITE:

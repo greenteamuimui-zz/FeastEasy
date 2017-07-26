@@ -36,7 +36,7 @@ const KitchenBox = ({kitchen}) => {
           <div className="review-info">
             <h2>Latest Review</h2>
             <h1>{review.title}</h1>
-            <h2>{review.body}</h2>
+            <p>{review.body}</p>
           </div>
           <div className="review-scores">
             <h2>Ratings:{review.overall_score}</h2>

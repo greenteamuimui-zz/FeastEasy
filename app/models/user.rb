@@ -6,6 +6,7 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
 
   has_many :favorites
+  has_many :reservations
 
   attr_reader :password
 

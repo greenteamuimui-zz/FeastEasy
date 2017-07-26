@@ -2,24 +2,35 @@ import React from 'react';
 import {Link, withRouter } from 'react-router-dom';
 import KitchenDetailHeader from './kitchen_detail_header';
 import ReservationBoxContainer from '../reservation/reservation_box_container';
-import Scrollchor from 'react-scrollchor';
 
 
 class KitchenDetail extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
+      anchorLinksClassName: "free"
     };
     // this.getCityName = this.getCityName.bind(this);
     this.setAnchorRef = this.setAnchorRef.bind(this);
     this.onAnchorClick = this.onAnchorClick.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchKitchen(this.props.match.params.kitchenId);
+    window.addEventListener('scroll', this.handleScroll);
     // if (!(this.props.city === null)) {
     //   this.getCityName();
     // }
+  }
+
+  handleScroll (e) {
+    let scrollTop = e.srcElement.body.scrollTop;
+    if (scrollTop > 700) {
+      this.setState({anchorLinksClassName: "fixed"});
+    } else {
+      this.setState({anchorLinksClassName: "free"});
+    }
   }
 
   componentWillReceiveProps(newProps) {
@@ -56,14 +67,11 @@ class KitchenDetail extends React.Component {
 
 
   render () {
-    console.log(this.props);
-    console.log(this.state);
     // if (Object.keys(this.props.kitchen).length > 1 && Object.keys(this.props.kitchen)[0]) {
     //   console.log("here");
     //   return null;
     // }
     if (!this.props.currentKitchen) {
-      console.log("here1");
       return null;
     }
     let kitchen = this.props.currentKitchen;
@@ -79,6 +87,7 @@ class KitchenDetail extends React.Component {
       </li>
       );
     });
+
     return (
       <div className="kitchen-show">
         <h1 className="white"> </h1>
@@ -87,7 +96,7 @@ class KitchenDetail extends React.Component {
             <ul className="kitchen-pics">
               {picComponent}
             </ul>
-            <div className="anchor-links">
+            <div className={`anchor-links ${this.state.anchorLinksClassName}`}>
               <p onClick={this.onAnchorClick("about")} className="anchors">About</p>
               <p onClick={this.onAnchorClick("reservation")} className="anchors">Reservation</p>
               <p onClick={this.onAnchorClick("reviews")} className="anchors">Reviews</p>

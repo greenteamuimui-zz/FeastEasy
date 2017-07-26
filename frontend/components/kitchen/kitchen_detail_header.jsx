@@ -47,21 +47,21 @@ const KitchenDetailHeader = ({kitchen, city, setAnchorRef}) => {
           <div className='kitchen-details'>
             <h2>Dinner Details</h2>
             <h3><i className="material-icons">access_time</i>Dinner Time</h3>
-            <p>
+            <h4>
               {kitchen.feast_time}
-            </p>
+            </h4>
             <h3><i className="material-icons">event_seat</i>Seatings</h3>
-            <p>
+            <h4>
               {kitchen.size} Max
-            </p>
+            </h4>
             <h3><i className="material-icons">phone</i>Phone</h3>
-            <p>
+            <h4>
               {kitchen.phone}
-            </p>
+            </h4>
             <h3><i className="material-icons">map</i>Address</h3>
-            <p>
+            <h4>
               {kitchen.address}
-            </p>
+            </h4>
             </div>
           </div>
       </div>

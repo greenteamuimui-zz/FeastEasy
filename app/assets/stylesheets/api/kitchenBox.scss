@@ -11,6 +11,11 @@
   // margin-bottom: 40px;
   padding: 20px;
   display: flex;
+  transition: 0.3s ease-in-out;
+}
+
+.indiv-kitchen:hover{
+  transform: scale(1.03);
 }
 
 .indiv-kitchen a {
@@ -25,6 +30,12 @@
 }
 
 .indiv-kitchen h2{
+  padding-left:10px;
+  padding-top: 5px;
+  font-size: 14px
+}
+
+.review-info p {
   padding-left:10px;
   padding-top: 5px;
   font-size: 14px

@@ -31,6 +31,27 @@ div.kitchen-show {
   // border: 1px solid green;
 }
 
+.free {
+  font-size: 20px;
+}
+.fixed {
+  font-size: 20px;
+  position: fixed;
+  top:0;
+}
+
+.kitchen-left p{
+  padding: 20px 0px 10px 10px;
+  color: #651601;
+}
+.kitchen-left p:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+
 .kitchen-right {
   // border: 1px solid red;
   width: 100%
