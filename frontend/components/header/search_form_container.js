@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import {fetchKitchens} from '../../actions/kitchen_actions';
 import {fetchCities} from '../../actions/city_actions';
-import {clearErrors} from '../../actions/errors_actions';
+import {clearErrors, receiveErrors} from '../../actions/errors_actions';
 import {sendSearch, clearSearch} from '../../actions/search_actions';
 import { withRouter } from 'react-router-dom';
 import SearchForm from './search_form';
@@ -25,7 +25,8 @@ const mapDispatchtoProps = (dispatch) => {
   sendSearch: (search) => dispatch(sendSearch(search)),
   clearSearch: () => dispatch(clearSearch(null)),
   fetchCities: () => dispatch(fetchCities()),
-  clearErrors: () => dispatch(clearErrors())
+  clearErrors: () => dispatch(clearErrors()),
+  receiveErrors: (error) => dispatch(receiveErrors(error.responseJSON)),
   };
 };
 

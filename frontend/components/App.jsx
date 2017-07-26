@@ -32,8 +32,8 @@ const App = () => (
       <AuthRoute path="/login" component={AuthFormContainer} />
       <AuthRoute path="/signup" component={AuthFormContainer} />
       <Route path="/kitchens/:kitchenId" component={KitchenDetailContainer} />
-      <Route path="/searchResults/:cityId.:size.:date.:searchString" component={searchResultsContainer}/>
+      <Route path="/searchResults" component={searchResultsContainer}/>
     </Switch>
   </div>);
-// <Route path="/searchResults/:cityId/:size/:date/:searchString" component={searchResultsContainer}/>
+// <Route path="/searchResults/:cityId.:size.:date.:searchString" component={searchResultsContainer}/>
 export default App;

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
+import qs from 'query-string';
 
 class SearchForm extends React.Component {
   constructor (props) {
@@ -7,7 +8,7 @@ class SearchForm extends React.Component {
     this.state = {
       city_id: "",
       size: "1",
-      date: "",
+      date: new Date(),
       search_string:""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,53 +25,69 @@ class SearchForm extends React.Component {
   //   }
   // }
 
+  // getSearch () {
+  //   let searchString;
+  //   if (this.props.match.params.searchString === "none") {
+  //     searchString = "";
+  //   }
+  //   return ({
+  //     city_id: this.props.match.params.cityId,
+  //     size: this.props.match.params.size,
+  //     date: this.props.match.params.date,
+  //     search_string: searchString
+  //   });
+  // }
   getSearch () {
-    let searchString;
-    if (this.props.match.params.searchString === "none") {
-      searchString = "";
-    }
+    const query = qs.parse(this.props.location.search);
     return ({
-      city_id: this.props.match.params.cityId,
-      size: this.props.match.params.size,
-      date: this.props.match.params.date,
-      search_string: searchString
+      city_id: query["cityId"],
+      size: query["size"],
+      date: query["date"],
+      search_string: query["searchString"]
     });
   }
 
  componentDidMount() {
-   console.log("form");
-   if (this.props.location.pathname === "/") {
-     this.props.fetchCities();
-     this.props.clearSearch();
-   } else {
-    this.props.fetchCities();
-     this.props.sendSearch(this.getSearch());
-     this.setState(this.getSearch());
-      }
-  }
+  this.props.fetchCities();
+  this.props.sendSearch(this.getSearch());
+  this.setState(this.getSearch());
+}
 
 
-  componentWillReceiveProps (newProps) {
-    if (newProps.location.pathname === "/") {
+componentWillReceiveProps (newProps) {
+  if(newProps.cities){
+    if(!this.state.city_id){
       this.setState({
-        city_id: newProps.cities[0].id,
-        size: "1",
-        date: "",
-        search_string:""
+        city_id: newProps.cities[0].id
       });
-    } else if(!(newProps.search === null)) {
-      this.setState(newProps.search); }
-    // } else if(this.props.cities !== newProps.cities) {
-    //   this.setState({city_id: newProps.cities[0].id});
-    // }
+    }
+    if(!this.state.date){
+      this.setState({
+        date: new Date()
+      });
+    }
+    if(!this.state.size){
+      this.setState({
+        size:1
+      });
+    }
+
   }
+}
 
   handleSubmit(e) {
     e.preventDefault();
-    let string = this.state.search_string || "none";
+    let string = this.state.search_string || "";
     this.props.sendSearch(this.state);
     this.props.fetchKitchens(this.state);
-    this.props.history.push(`/searchResults/${this.state.city_id}.${this.state.size}.${this.state.date}.${string}`);
+    const params = {
+      cityId: this.state.city_id,
+      size: this.state.size,
+      date: this.state.date,
+      searchString: string
+    };
+    const psearch = qs.stringify(params);
+    this.props.history.push(`/searchResults?${psearch}`);
   }
 
 

@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, withRouter } from 'react-router-dom';
 import SearchFormContainer from  '../header/search_form_container';
 import KitchenBox from  './kitchen_box';
+import qs from 'query-string';
 
 class searchResults extends React.Component {
   constructor (props) {
@@ -13,15 +14,12 @@ class searchResults extends React.Component {
   }
 
   getSearch () {
-    let searchString;
-    if (this.props.match.params.searchString === "none") {
-      searchString = "";
-    }
+    const query = qs.parse(this.props.location.search);
     return ({
-      city_id: this.props.match.params.cityId,
-      size: this.props.match.params.size,
-      date: this.props.match.params.date,
-      search_string: searchString
+      city_id: query["cityId"],
+      size: query["size"],
+      date: query["date"],
+      search_string: query["searchString"]
     });
   }
 
@@ -51,8 +49,10 @@ class searchResults extends React.Component {
     let city = "";
     let kitchens = "";
     let kitchensMap = "";
-    if (!(this.props.cities === null || this.props.kitchens === null|| this.props.search === null)) {
+    if(!(this.props.cities === null || this.props.search === null)) {
       city = this.props.cities[this.props.search.city_id];
+    }
+    if (!(this.props.kitchens === null|| this.props.search === null)) {
       kitchens = Object.values(this.props.kitchens);
     }
     if (Object.keys(kitchens).length > 0) {
@@ -60,6 +60,7 @@ class searchResults extends React.Component {
     } else {
       kitchensMap = <h5>Coming Soon...</h5>;
     }
+    console.log(city);
     return (
       <div className="search-results">
         <div className="city-photo">

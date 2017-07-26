@@ -10,8 +10,13 @@ class Api::KitchensController < ApplicationController
   end
 
   def index
-    filtered_kitchens = get_kitchens_using_params
-    @kitchens = reservation_comparator(filtered_kitchens)
+    if params[:search][:date].nil?
+      render json: ["Please Select a Date"], status:422
+      return
+    else
+      filtered_kitchens = get_kitchens_using_params
+      @kitchens = reservation_comparator(filtered_kitchens)
+    end
   end
 
   def show
@@ -33,9 +38,6 @@ class Api::KitchensController < ApplicationController
   end
 
   def reservation_comparator(filtered_kitchens)
-    if params[:search][:date] == ""
-      render json: ["Please Select a Date"], status:422
-    end
     date = Date.parse(params[:search][:date])
     result = [];
     filtered_kitchens.each do |kitchen|
