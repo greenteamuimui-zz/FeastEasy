@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 
 const mapStatetoProps = (state) => {
   return {
-    favArray: state.kitchen.favorite_id,
+    favArray: state.currentKitchen.favorite_id,
     currentUser: state.currentUser
   };
 };

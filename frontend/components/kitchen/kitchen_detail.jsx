@@ -7,7 +7,7 @@ class KitchenDetail extends React.Component {
   constructor (props) {
     super(props);
     // this.state = {
-    //   city: ""
+    //   currentKitchen: "",
     // };
     // this.getCityName = this.getCityName.bind(this);
   }
@@ -38,12 +38,19 @@ class KitchenDetail extends React.Component {
   //   return null;
   // }
   render () {
-    if (!this.props.kitchen) {
+    console.log(this.props);
+    console.log(this.state);
+    // if (Object.keys(this.props.kitchen).length > 1 && Object.keys(this.props.kitchen)[0]) {
+    //   console.log("here");
+    //   return null;
+    // }
+    if (!this.props.currentKitchen) {
+      console.log("here1");
       return null;
     }
-    let kitchen = this.props.kitchen;
-    let city = this.props.kitchen.city_name;
-    let favorites = this.props.kitchen.favorite_id;
+    let kitchen = this.props.currentKitchen;
+    let city = this.props.currentKitchen.city_name;
+    let favorites = this.props.currentKitchen.favorite_id;
     let pictures = Object.values(kitchen.image_url);
     let picComponent = pictures.map((picture, idx) => {
       return (

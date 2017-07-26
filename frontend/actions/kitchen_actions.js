@@ -6,8 +6,8 @@ export const RECEIVE_KITCHENS = "RECEIVE_KITCHENS";
 export const fetchKitchen = (id) => (dispatch) => {
   return (
     KitchenAPIUtil.fetchKitchen(id).then(
-      kitchen => {
-      dispatch(receiveKitchen(kitchen));
+      currentKitchen => {
+      dispatch(receiveKitchen(currentKitchen));
       dispatch(ErrorsAction.clearErrors());
     },
       error => dispatch(ErrorsAction.receiveErrors(error.responseJSON))
@@ -40,10 +40,10 @@ export const createKitchen = (kitchen) => (dispatch) => {
 };
 
 
-export const receiveKitchen = (kitchen) => {
+export const receiveKitchen = (currentKitchen) => {
   return ({
     type: RECEIVE_KITCHEN,
-    kitchen
+    currentKitchen
   });
 };
 
