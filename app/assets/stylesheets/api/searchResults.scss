@@ -1,0 +1,53 @@
+.search-results {
+  font-family: 'Zilla Slab', serif;
+  position: relative;
+}
+
+.search-results h5{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.search-results h6 {
+  color: white;
+  position: absolute;
+  top:20px;
+  left: 50px;
+  font-size: 40px;
+  font-weight: 600;
+
+  visibility: hidden;
+}
+
+
+.city-photo{
+  width:1300px;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 20px
+}
+
+.city-photo:hover{
+  opacity: 0.8
+}
+
+.city-photo:hover h6{
+  visibility: visible;
+  opacity: 1;
+}
+
+.city-photo img {
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  // padding: 5px;
+  height: auto;
+  width: 1400px;
+}

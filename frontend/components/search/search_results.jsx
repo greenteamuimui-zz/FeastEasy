@@ -46,7 +46,7 @@ class searchResults extends React.Component {
     }
   }
 
-
+// typeof(kitchens) === 'object'
   render() {
     let city = "";
     let kitchens = "";
@@ -55,15 +55,19 @@ class searchResults extends React.Component {
       city = this.props.cities[this.props.search.city_id];
       kitchens = Object.values(this.props.kitchens);
     }
-    if (typeof(kitchens) === 'object') {
+    if (Object.keys(kitchens).length > 0) {
       kitchensMap = kitchens.map((kitchen, idx) => <KitchenBox key={idx} kitchen={kitchen}/>);
+    } else {
+      kitchensMap = <h5>Coming Soon...</h5>;
     }
     return (
-      <div>
-      <h2>{city.name}</h2>
-      <img src={city.photo_url} />
-      <SearchFormContainer/ >
-      {kitchensMap}
+      <div className="search-results">
+        <div className="city-photo">
+          <h6>{city.name}</h6>
+          <img src={city.photo_url} />
+        </div>
+        <SearchFormContainer/ >
+        {kitchensMap}
       </div>
     );
   }
