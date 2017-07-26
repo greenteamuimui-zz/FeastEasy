@@ -25,7 +25,7 @@ class ReviewBox extends React.Component {
     }
     const {review} = this.props;
     return (
-    <div>
+    <div id="review-box">
       <div className="review-box">
         <h1>Reviews</h1>
         {review.map(indivReview => <ReviewBoxItem key={indivReview.id} review={indivReview} />)}

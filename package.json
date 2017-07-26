@@ -17,7 +17,8 @@
     "webpack": "^3.3.0",
     "react-modal": "latest",
     "lodash":"latest",
-    "query-string":"latest"
+    "query-string":"latest",
+    "react-scrollchor": "latest"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",

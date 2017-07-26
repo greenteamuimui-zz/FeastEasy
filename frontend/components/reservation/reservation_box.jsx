@@ -14,6 +14,7 @@ class ReservationBox extends React.Component {
     // this.calculateSeats = this.calculateSeats.bind(this);
     // this.updateState = this.updateState.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   // calculateSeats () {
@@ -35,18 +36,29 @@ class ReservationBox extends React.Component {
     };
   }
   //
-  // componentDidMount() {
-  //   this.calculateSeats();
-  // }
+  componentDidMount() {
+    if (!(this.props.search === null)){
+      this.setState({date: this.props.search.date});
+      this.setState({seats: this.props.search.size});
+    }
+  }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.createReservation(this.state);
   }
 
+  renderErrors() {
+    return (
+      <p className="errors">
+        {this.props.errors[0]}
+      </p>
+    );
+  }
+
 
   render () {
-    // console.log(this.props);
+    console.log(this.props);
     // console.log(this.props.reservation);
     let message = "";
     let kitchenSize = this.props.kitchenSize;
@@ -60,6 +72,7 @@ class ReservationBox extends React.Component {
     return (
       <div className="reservation-box">
         <h2>Make A Reservation</h2>
+        {this.renderErrors()}
         <form className="reservation-form" onSubmit={this.handleSubmit}>
         <h3>Select Date:</h3>
         <input className="date-selector" type="date"
@@ -81,3 +94,29 @@ class ReservationBox extends React.Component {
 }
 
 export default withRouter(ReservationBox);
+
+
+// <input type="button" name="btn" value="Submit" id="submitBtn" data-toggle="modal" data-target="#confirm-submit" class="btn btn-default" />
+// <div class="modal fade" id="confirm-submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+//   <div class="modal-dialog">
+//     <div class="modal-content">
+//       <div class="modal-header">
+//         Confirm Submit
+//       </div>
+//       <div class="modal-body">
+//         Are you sure you want to submit the following details?
+//
+//         <table class="table">
+//           <tr>
+//             <th>Last Name</th>
+//             <td id="lname"></td>
+//           </tr>
+//           <tr>
+//             <th>First Name</th>
+//             <td id="fname"></td>
+//           </tr>
+//         </table>
+//       </div>
+//     </div>
+//   </div>
+// </div>

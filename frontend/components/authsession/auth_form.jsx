@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import Modal from 'react-modal';
+import { browserHistory, Router } from 'react-router';
+
 
 class AuthForm extends React.Component {
   constructor (props) {
@@ -25,13 +27,17 @@ class AuthForm extends React.Component {
       password: ""
     });
   } else if (nextProps.loggedIn) {
-      this.props.history.push('/');
+      // this.props.history.push('/');
+      // Router.History.back();
+      this.props.history.goBack();
     }
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+    this.props.processForm(this.state).then(() => {
+      this.props.history.goBack();
+    });
   }
 
   updateState(property) {
@@ -49,7 +55,8 @@ class AuthForm extends React.Component {
   }
 
   closeModal() {
-    this.props.history.push('/');
+    // this.props.history.push('/');
+    this.props.history.goBack();
   }
 
   render () {
@@ -86,7 +93,7 @@ class AuthForm extends React.Component {
     let message = "Log In";
     let otherlink = <Link to="/signup">Create an account here!</Link>;
     if (formType === "signup") {
-      message = "Sign Up"
+      message = "Sign Up";
       emailInput=
       <label className="extra">
         <h2>Email Address</h2>

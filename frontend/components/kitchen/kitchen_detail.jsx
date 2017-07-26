@@ -2,6 +2,8 @@ import React from 'react';
 import {Link, withRouter } from 'react-router-dom';
 import KitchenDetailHeader from './kitchen_detail_header';
 import ReservationBoxContainer from '../reservation/reservation_box_container';
+import Scrollchor from 'react-scrollchor';
+
 
 class KitchenDetail extends React.Component {
   constructor (props) {
@@ -70,9 +72,9 @@ class KitchenDetail extends React.Component {
               {picComponent}
             </ul>
             <div className="anchor-links">
-              <a>About</a>
-              <a>reservation</a>
-              <a>review</a>
+              <Scrollchor to="#kitchen-about" className="anchors">Home</Scrollchor>
+              <Scrollchor to="#reservation-box" className="anchors">Reservation</Scrollchor>
+              <Scrollchor to="#review-box" className="anchors">Reviews</Scrollchor>
             </div>
           </div>
           <KitchenDetailHeader kitchen={kitchen} city={city} />

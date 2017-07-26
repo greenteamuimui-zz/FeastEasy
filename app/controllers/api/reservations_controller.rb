@@ -1,6 +1,10 @@
 class Api::ReservationsController < ApplicationController
 
   def create
+    if params[:reservation][:date] == ""
+      render json: ["Please Select A Date"], status: 422
+      return
+    end
     kitchen = Kitchen.includes(:reservations).find_by(id: params[:reservation][:kitchen_id])
     total_seats = 0
     kitchen.reservations.each do |reservation|

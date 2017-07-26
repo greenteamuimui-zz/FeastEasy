@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderContainer from './header/header_container';
 import AuthFormContainer from './authsession/auth_form_container';
 import { Route, Switch, Link } from 'react-router-dom';
-import {AuthRoute} from '../util/route_util';
+import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import KitchenDetailContainer from './kitchen/kitchen_detail_container';
 import SearchBar from './header/searchbar';
 import SearchFormContainer from './header/search_form_container';
@@ -31,7 +31,7 @@ const App = () => (
       <Route exact path="/" component={SearchBar} />
       <AuthRoute path="/login" component={AuthFormContainer} />
       <AuthRoute path="/signup" component={AuthFormContainer} />
-      <Route path="/kitchens/:kitchenId" component={KitchenDetailContainer} />
+      <ProtectedRoute path="/kitchens/:kitchenId" component={KitchenDetailContainer} />
       <Route path="/searchResults" component={searchResultsContainer}/>
     </Switch>
   </div>);

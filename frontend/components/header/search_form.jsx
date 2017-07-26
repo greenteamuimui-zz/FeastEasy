@@ -8,7 +8,7 @@ class SearchForm extends React.Component {
     this.state = {
       city_id: "",
       size: "1",
-      date: new Date(),
+      date: (new Date()).toISOString().slice(0, 10),
       search_string:""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -63,7 +63,7 @@ componentWillReceiveProps (newProps) {
     }
     if(!this.state.date){
       this.setState({
-        date: new Date()
+        date: (new Date()).toISOString().slice(0, 10),
       });
     }
     if(!this.state.size){

@@ -49,8 +49,12 @@ class searchResults extends React.Component {
     let city = "";
     let kitchens = "";
     let kitchensMap = "";
-    if(!(this.props.cities === null || this.props.search === null)) {
-      city = this.props.cities[this.props.search.city_id];
+    if( (!(this.props.cities === null)) || (!(this.props.search === null)) ) {
+      if (this.props.search.city_id === undefined) {
+        city = this.props.cities[qs.parse(this.props.location.search)["cityId"]];
+      } else {
+        city = this.props.cities[this.props.search.city_id];
+      }
     }
     if (!(this.props.kitchens === null|| this.props.search === null)) {
       kitchens = Object.values(this.props.kitchens);
@@ -60,7 +64,6 @@ class searchResults extends React.Component {
     } else {
       kitchensMap = <h5>Coming Soon...</h5>;
     }
-    console.log(city);
     return (
       <div className="search-results">
         <div className="city-photo">

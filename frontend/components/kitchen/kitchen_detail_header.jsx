@@ -32,16 +32,16 @@ const KitchenDetailHeader = ({kitchen, city}) => {
 
         <div className="kitchen-info">
           <div className='right-first-box'>
+            <ReservationBoxContainer kitchenSize={kitchen.size} />
             <div className='kitchen-about'>
               <h2>About</h2>
               <p>
                 {kitchen.about}
               </p>
             </div>
-            <ReservationBoxContainer kitchenSize={kitchen.size} />
             <div className="review-section">
-              <ReviewBoxContainer />
               <ReviewFormContainer />
+              <ReviewBoxContainer />
             </div>
           </div>
           <div className='kitchen-details'>

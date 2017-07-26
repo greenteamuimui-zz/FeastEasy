@@ -7,7 +7,9 @@ import { withRouter } from 'react-router-dom';
 const mapStatetoProps = (state) => {
   return {
     reservation: state.reservation,
-    currentUser: state.currentUser
+    currentUser: state.currentUser,
+    errors: state.errors,
+    search: state.search
   };
 };
 

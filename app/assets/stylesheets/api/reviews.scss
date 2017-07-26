@@ -11,8 +11,8 @@
   padding: 20px;
   box-shadow: 2px 3px 3px #651601;
   border-radius: 10px;
-  height: 250px;
-  overflow: scroll;
+  height: 100%;
+  // overflow: scroll;
 }
 
  i {
@@ -161,13 +161,13 @@ img.icon {
 }
 
 input[type="radio"] {
-    -webkit-appearance: none;
-    width: 27px;
-    height: 27px;
-    background-image: url(/assets/stars.png);
-    vertical-align: bottom;
-    outline: none;
-    cursor: pointer;
+  -webkit-appearance: none;
+  width: 27px;
+  height: 27px;
+  background-image: url(/assets/stars.png);
+  vertical-align: bottom;
+  outline: none;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked {
