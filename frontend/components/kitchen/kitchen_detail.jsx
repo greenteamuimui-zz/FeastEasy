@@ -8,10 +8,11 @@ import Scrollchor from 'react-scrollchor';
 class KitchenDetail extends React.Component {
   constructor (props) {
     super(props);
-    // this.state = {
-    //   currentKitchen: "",
-    // };
+    this.state = {
+    };
     // this.getCityName = this.getCityName.bind(this);
+    this.setAnchorRef = this.setAnchorRef.bind(this);
+    this.onAnchorClick = this.onAnchorClick.bind(this);
   }
 
   componentDidMount() {
@@ -39,6 +40,21 @@ class KitchenDetail extends React.Component {
   // if (!this.props.city) {
   //   return null;
   // }
+
+  setAnchorRef (name, el) {
+    if (!(this.state[name])) {
+      this.setState({[name]: el});
+    }
+  }
+
+  onAnchorClick (name) {
+    return () => {
+      const el = this.state[name];
+      el.scrollIntoView();
+    };
+  }
+
+
   render () {
     console.log(this.props);
     console.log(this.state);
@@ -72,12 +88,12 @@ class KitchenDetail extends React.Component {
               {picComponent}
             </ul>
             <div className="anchor-links">
-              <Scrollchor to="#kitchen-about" className="anchors">Home</Scrollchor>
-              <Scrollchor to="#reservation-box" className="anchors">Reservation</Scrollchor>
-              <Scrollchor to="#review-box" className="anchors">Reviews</Scrollchor>
+              <p onClick={this.onAnchorClick("about")} className="anchors">About</p>
+              <p onClick={this.onAnchorClick("reservation")} className="anchors">Reservation</p>
+              <p onClick={this.onAnchorClick("reviews")} className="anchors">Reviews</p>
             </div>
           </div>
-          <KitchenDetailHeader kitchen={kitchen} city={city} />
+          <KitchenDetailHeader kitchen={kitchen} city={city} setAnchorRef={this.setAnchorRef} />
         </div>
       </div>
     );

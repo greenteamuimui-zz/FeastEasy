@@ -9,7 +9,7 @@ import FavoriteButtonContainer from '../favorite/favorite_button_container';
 //   Favorite
 // </button>
 
-const KitchenDetailHeader = ({kitchen, city}) => {
+const KitchenDetailHeader = ({kitchen, city, setAnchorRef}) => {
   return (
       <div className='kitchen-right'>
         <div className="kitchen-header-content">
@@ -31,15 +31,15 @@ const KitchenDetailHeader = ({kitchen, city}) => {
         </div>
 
         <div className="kitchen-info">
-          <div className='right-first-box'>
+          <div className='right-first-box' ref={(el) => setAnchorRef("reservation", el)}>
             <ReservationBoxContainer kitchenSize={kitchen.size} />
-            <div className='kitchen-about'>
+            <div className='kitchen-about' ref={(el) => setAnchorRef("about", el)}>
               <h2>About</h2>
               <p>
                 {kitchen.about}
               </p>
             </div>
-            <div className="review-section">
+            <div className="review-section" ref={(el) => setAnchorRef("reviews", el)}>
               <ReviewFormContainer />
               <ReviewBoxContainer />
             </div>

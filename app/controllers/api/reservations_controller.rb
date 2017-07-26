@@ -5,6 +5,10 @@ class Api::ReservationsController < ApplicationController
       render json: ["Please Select A Date"], status: 422
       return
     end
+    if Date.parse(params[:reservation][:date]) < DateTime.now.to_date
+      render json: ["We can't go back in time yet..."], status: 422
+      return
+    end
     kitchen = Kitchen.includes(:reservations).find_by(id: params[:reservation][:kitchen_id])
     total_seats = 0
     kitchen.reservations.each do |reservation|
@@ -21,7 +25,6 @@ class Api::ReservationsController < ApplicationController
       end
     else
       render json: {}
-      #  or render an error instead?
     end
   end
 

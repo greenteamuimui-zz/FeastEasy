@@ -10,6 +10,9 @@ class ReservationBox extends React.Component {
         seats: 0,
         date: ""
     };
+    // this.modalState = {
+    //   modalState: false;
+    // }
 
     // this.calculateSeats = this.calculateSeats.bind(this);
     // this.updateState = this.updateState.bind(this);
@@ -56,10 +59,39 @@ class ReservationBox extends React.Component {
     );
   }
 
+  closeModal() {
+    // this.props.history.push('/');
+    this.props.history.goBack();
+  }
+
 
   render () {
-    console.log(this.props);
-    // console.log(this.props.reservation);
+
+  const customStyles = {
+    overlay : {
+      position          : 'fixed',
+      top               : 0,
+      left              : 0,
+      right             : 0,
+      bottom            : 0,
+      backgroundColor   : 'rgba(236, 229, 229, 0.75)'
+    },
+    content : {
+      position                   : 'absolute',
+      top                        : '30%',
+      left                       : '40%',
+      right                      : 'auto',
+      bottom                     : 'auto',
+      border                     : '5px solid #AE1628',
+      background                 : '#fff',
+      overflow                   : 'auto',
+      WebkitOverflowScrolling    : 'touch',
+      borderRadius               : '10px',
+      outline                    : 'none',
+      padding                    : '20px'
+    }
+  };
+
     let message = "";
     let kitchenSize = this.props.kitchenSize;
     if (this.props.reservation === null ) {
@@ -86,37 +118,21 @@ class ReservationBox extends React.Component {
           />
         <input className="submit-button" type="submit" value="Save your seats"/>
         </form>
-        <h4>{message}</h4>
+
+
       </div>
     );
   }
 
 }
 
+// <Modal
+//   className="modal"
+//   isOpen={false}
+//   contentLabel="Modal"
+//   onRequestClose={this.closeModal}
+//   style={customStyles}
+//   >
+//   <h4>{message}</h4>
+// </Modal>
 export default withRouter(ReservationBox);
-
-
-// <input type="button" name="btn" value="Submit" id="submitBtn" data-toggle="modal" data-target="#confirm-submit" class="btn btn-default" />
-// <div class="modal fade" id="confirm-submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-//   <div class="modal-dialog">
-//     <div class="modal-content">
-//       <div class="modal-header">
-//         Confirm Submit
-//       </div>
-//       <div class="modal-body">
-//         Are you sure you want to submit the following details?
-//
-//         <table class="table">
-//           <tr>
-//             <th>Last Name</th>
-//             <td id="lname"></td>
-//           </tr>
-//           <tr>
-//             <th>First Name</th>
-//             <td id="fname"></td>
-//           </tr>
-//         </table>
-//       </div>
-//     </div>
-//   </div>
-// </div>
