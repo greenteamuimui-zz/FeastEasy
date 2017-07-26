@@ -38,6 +38,7 @@ class SearchForm extends React.Component {
   }
 
  componentDidMount() {
+   console.log("form");
    if (this.props.location.pathname === "/") {
      this.props.fetchCities();
      this.props.clearSearch();
@@ -68,6 +69,7 @@ class SearchForm extends React.Component {
     e.preventDefault();
     let string = this.state.search_string || "none";
     this.props.sendSearch(this.state);
+    this.props.fetchKitchens(this.state);
     this.props.history.push(`/searchResults/${this.state.city_id}.${this.state.size}.${this.state.date}.${string}`);
   }
 

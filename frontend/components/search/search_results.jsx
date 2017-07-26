@@ -35,6 +35,7 @@ class searchResults extends React.Component {
   // }
 
   componentDidMount() {
+    console.log("here");
     this.props.fetchKitchens(this.getSearch());
     if (this.props.cities === null) {
       this.props.fetchCities();
