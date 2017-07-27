@@ -27,6 +27,18 @@ export const fetchKitchens = (search) => (dispatch) => {
   );
 };
 
+export const fetchFavoriteKitchens = (ids) => (dispatch) => {
+  return (
+    KitchenAPIUtil.fetchFavoriteKitchens(ids).then(
+      kitchens => {
+      dispatch(receiveKitchens(kitchens));
+      dispatch(ErrorsAction.clearErrors());
+    },
+      error => dispatch(ErrorsAction.receiveErrors(error.responseJSON))
+    )
+  );
+};
+
 export const createKitchen = (kitchen) => (dispatch) => {
   return (
     KitchenAPIUtil.receiveKitchen(kitchen).then(

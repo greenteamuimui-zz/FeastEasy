@@ -17,6 +17,16 @@ export const fetchKitchen = (id) => {
   );
 };
 
+export const fetchFavoriteKitchens = (ids) => {
+  return (
+    $.ajax({
+      method: 'GET',
+      url: `/api/kitchens`,
+      data: ids
+    })
+  );
+};
+
 export const createKitchen = (kitchen) => {
   return (
     $.ajax({

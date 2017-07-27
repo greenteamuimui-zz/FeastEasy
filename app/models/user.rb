@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   has_many :favorites
   has_many :reservations
+  has_many :kitchens
+  has_many :reviews
 
   attr_reader :password
 
