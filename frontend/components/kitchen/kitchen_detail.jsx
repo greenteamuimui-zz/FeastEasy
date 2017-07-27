@@ -100,6 +100,7 @@ class KitchenDetail extends React.Component {
               <p onClick={this.onAnchorClick("about")} className="anchors">About</p>
               <p onClick={this.onAnchorClick("reservation")} className="anchors">Reservation</p>
               <p onClick={this.onAnchorClick("reviews")} className="anchors">Reviews</p>
+              <p><a onClick={() => this.props.history.goBack()}>Back to Results</a></p>
             </div>
           </div>
           <KitchenDetailHeader kitchen={kitchen} city={city} setAnchorRef={this.setAnchorRef} />

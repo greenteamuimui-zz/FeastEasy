@@ -11,7 +11,7 @@ div.search-bar {
 div.search-bar section {
   border-radius: 5px;
   position: relative;
-  top: 450px;
+  top: 350px;
   // left: 100px;
   margin: auto;
   background-color: #FFF3F4;
@@ -60,6 +60,7 @@ div.search-bar h2 {
   display: flex;
   justify-content: center;
   height: 100%;
+  align-items: center;
 }
 
 .seats-selector {

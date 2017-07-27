@@ -22,6 +22,8 @@ div.static a {
   margin: 0 auto;
   align-items: center;
   height: 60px;
+  background-color: white;
+  border:2px solid grey;
 }
 
 .app-left h1 {
@@ -37,9 +39,12 @@ img.s-logo {
   padding: 5px;
   // border: 1px solid black;
   height: 40px;
+  margin:auto;
+  display: flex;
 }
 
 .app-left {
+  align-items: center;
   display: flex;
 }
 // img.main {

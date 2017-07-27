@@ -1,0 +1,141 @@
+.mypage-bg{
+  background-image: url("http://res.cloudinary.com/greenteamuimui/image/upload/co_rgb:f34646,dn_150,e_grayscale,o_84/v1501196454/dining2_yb0k5d.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+.mypage {
+  font-family: 'Zilla Slab', serif;
+  display: flex;
+  // border: 1px solid black;
+  width: 95%;
+  margin:auto;
+//   background-image: url("http://res.cloudinary.com/greenteamuimui/image/upload/c_crop,w_1150/v1501188074/imageedit_34_4485758744_tfcrge.png");
+//   background-repeat: no-repeat;
+//   background-size:cover;
+//   background-attachment: fixed;
+}
+
+.mypage-bg h6{
+  font-family: 'Zilla Slab', serif;
+  font-size: 35px;
+  font-weight: 600;
+  text-align:left;
+  padding: 20px;
+}
+
+.user-pic-box {
+  width:100%;
+  height: 20%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.user-pic-box img {
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  // padding: 5px;
+  height: auto;
+  width: 400px;
+}
+
+
+.user-info{
+  display: flex;
+  // border: 1px solid red;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 20%;
+  align-items: center;
+  margin:20px 20px 20px 40px;
+  height:100%;
+  box-shadow: 2px 2px 2px grey;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.user-info h1{
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.user-info h2{
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.userpage-right{
+  // border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.userpage-right h3{
+  padding: 20px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.user-favs {
+  display: flex;
+}
+.review-info-box {
+  display: flex;
+  width: 100%;
+}
+
+.fav-kitchen-box {
+  // border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.fav-kitchen{
+  // border: 2px solid grey;
+  box-shadow: 2px 2px 2px grey;
+  font-family: 'Zilla Slab', serif;
+  border-radius: 5px;
+  background-color: white;
+  margin: 20px 10px 20px 10px;
+  display: flex;
+  transition: 0.3s ease-in-out;
+  width: 50%;
+}
+
+.fav-kitchen:hover{
+  transform: scale(1.03);
+}
+
+.fav-kitchen a {
+  text-decoration: none;
+  color: #651601;
+  font-weight: 600;
+}
+
+.fav-kitchen h1{
+  font-size: 20px;
+  padding: 10px;
+}
+
+.fav-kitchen h2{
+  padding-left:10px;
+  padding-top: 5px;
+  font-size: 14px
+}
+
+.favkitchen-box-info {
+  // border: 1px solid black;
+  padding:10px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}

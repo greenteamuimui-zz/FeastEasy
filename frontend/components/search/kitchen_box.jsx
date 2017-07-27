@@ -15,9 +15,11 @@ const KitchenBox = ({kitchen}) => {
   if (kitchen.overall_score === 0) {
     score = "No Score Yet...";
   } else {
-    score = kitchen.overall_score;
+    score = (kitchen.overall_score).toFixed(2);
   }
   return (
+    <div className="indiv-kitchen-wrap">
+    <Link to={`/kitchens/${kitchen.id}`}>
     <div className="indiv-kitchen">
         <div className="kitchen-box">
           <div className="pic-box">
@@ -27,7 +29,7 @@ const KitchenBox = ({kitchen}) => {
             <h1><Link to={`/kitchens/${kitchen.id}`}>{kitchen.name}</Link></h1>
             <div className="kitchen-box-about">
               <h2>{kitchen.cuisine}</h2>
-              <h2>{score}</h2>
+              <h2>Overall: {score}</h2>
               <h2>{kitchen.address}</h2>
             </div>
           </div>
@@ -39,14 +41,16 @@ const KitchenBox = ({kitchen}) => {
             <p>{review.body}</p>
           </div>
           <div className="review-scores">
-            <h2>Ratings:{review.overall_score}</h2>
-            <h2>Food:{review.food_score}</h2>
-            <h2>Atmosphere:{review.atmosphere_score}</h2>
-            <h2>Host:{review.host_score}</h2>
-            <h2>Price:{review.price_score}</h2>
+            <h2>Ratings: {review.overall_score}</h2>
+            <h2>Food: {review.food_score}</h2>
+            <h2>Atmosphere: {review.atmosphere_score}</h2>
+            <h2>Host: {review.host_score}</h2>
+            <h2>Price: {review.price_score}</h2>
             </div>
         </div>
     </div>
+    </Link>
+  </div>
   );
 
 };

@@ -29,7 +29,6 @@ class Api::ReservationsController < ApplicationController
   end
 
   def index
-    # debugger
     kitchens = Kitchen.find(params[:kitchenId])
     @reservations = kitchens.reservations.where(date: Date.parse(params[:date]))
   end

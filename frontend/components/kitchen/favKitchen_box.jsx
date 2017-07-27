@@ -11,15 +11,14 @@ const favKitchenBox = ({kitchen, pictures}) => {
     }
   }
   return (
-    <div className="indiv-kitchen">
-        <div className="kitchen-box">
+    <div className="fav-kitchen">
+        <div className="fav-kitchen-box">
           <div className="pic-box">
             <Link to={`/kitchens/${kitchen.id}`}><img src={pictureUrl}/></Link>
           </div>
-          <div className="kitchen-box-info">
+          <div className="favkitchen-box-info">
             <h1><Link to={`/kitchens/${kitchen.id}`}>{kitchen.name}</Link></h1>
             <div className="kitchen-box-about">
-              <h2>{kitchen.about}</h2>
               <h2>{kitchen.cuisine}</h2>
               <h2>{kitchen.address}</h2>
             </div>

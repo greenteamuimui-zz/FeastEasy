@@ -73,6 +73,7 @@ li {
   border: 2px solid #651601;
   box-shadow: 2px 3px 3px #651601;
   border-radius: 10px;
+  background-color: white;
 }
 
 div.icon {
@@ -143,7 +144,7 @@ img.icon {
   text-align: right;
   padding-top: 40px;
   flex: 1.2;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 .review-form-left {
@@ -171,5 +172,9 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
+  background-position: 0px 30px;
+}
+
+input[type="radio"]:checked:before, input[type="radio"] ~ input[type="radio"]:checked {
   background-position: 30px 30px;
 }
