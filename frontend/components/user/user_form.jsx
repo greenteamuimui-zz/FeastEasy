@@ -13,6 +13,7 @@ class UserForm extends React.Component {
       uploadedFileCloudinaryUrl: ''
     };
     this.onImageDrop = this.onImageDrop.bind(this);
+    this.handleImageUpload = this.handleImageUpload.bind(this);
   }
 
   onImageDrop(files) {
@@ -42,6 +43,7 @@ class UserForm extends React.Component {
 
 
   render () {
+    console.log(this.props);
     return(
       <div>
         <div className="pic-form">

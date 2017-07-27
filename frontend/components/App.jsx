@@ -30,8 +30,8 @@ const App = () => (
   </div>
     <Switch>
       <Route exact path="/" component={SearchBar} />
-      <AuthRoute path="/login" component={AuthFormContainer} />
-      <AuthRoute path="/signup" component={AuthFormContainer} />
+      <AuthRoute exact path="/login" component={AuthFormContainer} />
+      <AuthRoute exact path="/signup" component={AuthFormContainer} />
       <ProtectedRoute path="/kitchens/:kitchenId" component={KitchenDetailContainer} />
       <ProtectedRoute path="/myPage" component={UserDetailContainer} />
       <Route path="/searchResults" component={searchResultsContainer}/>

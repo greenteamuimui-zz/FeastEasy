@@ -3,7 +3,7 @@ export const updateUser = (id, image_url) => {
     $.ajax({
       method: 'PUT',
       url: `/api/users/${id}`,
-      data: {image_url}
+      data: {user: {image_url: image_url}}
     })
   );
 };

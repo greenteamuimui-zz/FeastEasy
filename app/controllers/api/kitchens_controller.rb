@@ -22,14 +22,13 @@ class Api::KitchensController < ApplicationController
   def show
     @kitchen = Kitchen.find(params[:id])
   end
-
   private
 
   def get_kitchens_using_params
     size = params[:search][:size].to_i
     search_string = params[:search][:search_string]
     kitchens = Kitchen.where({city_id: params[:search][:city_id]}).where('size > ?', size)
-    if params[:search][:search_string] == ""
+    if  params[:search][:search_string] == nil
       filtered_kitchens = kitchens
     else
       filtered_kitchens = kitchens.where('LOWER(name) LIKE ? OR LOWER(cuisine) LIKE ? OR LOWER(about) LIKE ?', "%#{search_string.downcase}%","%#{search_string.downcase}%","%#{search_string.downcase}%")

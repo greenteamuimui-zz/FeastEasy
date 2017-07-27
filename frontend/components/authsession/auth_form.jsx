@@ -27,9 +27,9 @@ class AuthForm extends React.Component {
       password: ""
     });
   } else if (nextProps.loggedIn) {
-      // this.props.history.push('/');
+      this.props.history.push('/');
       // Router.History.back();
-      this.props.history.goBack();
+      // this.props.history.goBack();
     }
   }
 

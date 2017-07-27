@@ -3,8 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 
 
 const favKitchenBox = ({kitchen, pictures}) => {
-  console.log(kitchen);
-  console.log(pictures);
   let pictureUrl ="";
   for (let i = 0; i < pictures.length; i++) {
     if (pictures[i].kitchen_id === kitchen.id) {
@@ -12,8 +10,6 @@ const favKitchenBox = ({kitchen, pictures}) => {
       break;
     }
   }
-  console.log(kitchen);
-  console.log(pictureUrl);
   return (
     <div className="indiv-kitchen">
         <div className="kitchen-box">
@@ -36,4 +32,3 @@ const favKitchenBox = ({kitchen, pictures}) => {
 
 const WrappedfavKitchenBox = withRouter(favKitchenBox);
 export default WrappedfavKitchenBox;
-// export default favKitchenBox;

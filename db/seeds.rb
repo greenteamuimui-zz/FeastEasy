@@ -79,6 +79,19 @@ r2 = Review.create!(kitchen_id: k1.id, user_id: u2.id, title:"I love it!", body:
 r3 = Review.create!(kitchen_id: k2.id, user_id: u1.id, title:"Need to make friends with Ilya!", body:"The way you drink with the best folks!", food_score:3, atmosphere_score: 3, host_score: 4, price_score: 4)
 r4 = Review.create!(kitchen_id: k2.id, user_id: u3.id, title:"The Russian way of drinking vodka!", body:"Best home cook russian food ever!", food_score:4, atmosphere_score: 4, host_score: 5, price_score: 3)
 r5 = Review.create!(kitchen_id: k3.id, user_id: u1.id, title:"Good old time!", body:"Who doesn't love drinking beer in a nice secluded backyard!", food_score:3, atmosphere_score: 4, host_score: 4, price_score: 3)
+r6 = Review.create!(kitchen_id: k5.id, user_id: u6.id, title:"Andre is the best!", body:"5 Stars - It almost seems unnecessary to say how how welcoming the owner is. My short visit for lunch was by far the best lunch pretty much ever. When I left, Andre gave me a hug and wished me safe travels. When you visit Andre’s, you don't just get a meal, you get an always life changing experience.", food_score:5, atmosphere_score: 4, host_score: 4, price_score: 5)
+r7 = Review.create!(kitchen_id: k6.id, user_id: u1.id, title:"Can't wait go to another one these!", body:"Dinner at La Vara was a very rewarding experience - the food, the ambiance and the service were top notch. We ordered a few tapas that included vegetables, rabbit, and fish and all were delicious complemented by exquisite sauces. It was certainly a feast in the mouth.", food_score:3, atmosphere_score: 4, host_score: 4, price_score: 5)
+r8 = Review.create!(kitchen_id: k4.id, user_id: u2.id, title:"So Wonderful.", body:"4 stars - Certainly my neighborhood favorite. Food is delicious, prepared hot, service is very good. At times they have freshly baked good (haven't tried them but smells good).", food_score:5, atmosphere_score: 4, host_score: 3, price_score: 5)
+r9 = Review.create!(kitchen_id: k1.id, user_id: u6.id, title:"5 stars - Dinner at Hans’ was a very rewarding experience - the food, the ambiance and the service were top notch. We ordered a few tapas that included vegetables, rabbit, and fish and all were delicious complemented by exquisite sauces. It was certainly a feast in the mouth.
+", food_score:5, atmosphere_score: 1, host_score: 3, price_score: 5)
+r10 = Review.create!(kitchen_id: k1.id, user_id: u6.id, title:"5 Stars - I was so pleasantly surprised by the service here. I came in to do some work on my laptop and soon found myself surrounded by a few very rowdy children. When the children left, someone from the staff offered me a free cupcake for the 'trouble' of enduring the children, which they had nothing to do with. I refused and when I went to buy coffee they tried to make me not pay for it for the same reason. I paid since they were not at fault at all. I was amazed by the quality of service! The coffee was very good too.", food_score:5, atmosphere_score: 1, host_score: 3, price_score: 5)
+
 
 f1 = Favorite.create!(kitchen_id: k1.id, user_id:u2.id)
-f2 = Favorite.create!(kitchen_id: k2.id, user_id:u1.id)
+f2 = Favorite.create!(kitchen_id: k7.id, user_id:u2.id)
+f3 = Favorite.create!(kitchen_id: k2.id, user_id:u1.id)
+f4 = Favorite.create!(kitchen_id: k4.id, user_id:u1.id)
+f5 = Favorite.create!(kitchen_id: k5.id, user_id:u3.id)
+f6 = Favorite.create!(kitchen_id: k1.id, user_id:u3.id)
+f7 = Favorite.create!(kitchen_id: k5.id, user_id:u5.id)
+f8 = Favorite.create!(kitchen_id: k8.id, user_id:u5.id)
