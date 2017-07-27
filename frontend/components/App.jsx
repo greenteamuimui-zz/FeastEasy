@@ -33,7 +33,7 @@ const App = () => (
       <AuthRoute path="/login" component={AuthFormContainer} />
       <AuthRoute path="/signup" component={AuthFormContainer} />
       <ProtectedRoute path="/kitchens/:kitchenId" component={KitchenDetailContainer} />
-      <ProtectedRoute path="/users/currentUser" component={UserDetailContainer} />
+      <ProtectedRoute path="/myPage" component={UserDetailContainer} />
       <Route path="/searchResults" component={searchResultsContainer}/>
     </Switch>
   </div>);

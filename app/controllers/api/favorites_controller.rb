@@ -11,7 +11,6 @@ class Api::FavoritesController < ApplicationController
   end
 
   def index
-
   end
 
 

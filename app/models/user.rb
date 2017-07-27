@@ -9,6 +9,10 @@ class User < ApplicationRecord
   has_many :reservations
   has_many :kitchens
   has_many :reviews
+  
+  has_many :favorited_kitchens,
+  through: :favorites,
+  source: :kitchen
 
   attr_reader :password
 
