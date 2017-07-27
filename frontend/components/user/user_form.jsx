@@ -35,6 +35,7 @@ class UserForm extends React.Component {
         this.setState({
           uploadedFileCloudinaryUrl: response.body.secure_url
         });
+        this.props.updateUser(this.props.currentUser.id, response.body.secure_url);
       }
     });
   }

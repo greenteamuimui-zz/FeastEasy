@@ -6,14 +6,14 @@ Picture.destroy_all
 Review.destroy_all
 Favorite.destroy_all
 
-u1 = User.create(username: "Cherry", email:"cherry@gmail.com", password:"123456")
-u2 = User.create(username: "Ilya", email:"ilya@gmail.com", password:"654321")
+u1 = User.create(username: "Cherry", email:"cherry@gmail.com", password:"123456", image_url:"http://res.cloudinary.com/greenteamuimui/image/upload/v1501132405/9313_10151085029292245_1912354645_n_eomioh.jpg")
+u2 = User.create(username: "Ilya", email:"ilya@gmail.com", password:"654321", image_url:"http://res.cloudinary.com/greenteamuimui/image/upload/v1501132680/user3_lwhnyk.jpg")
 u3 = User.create(username: "Guest", email:"guest@gmail.com", password:"123456")
-u4 = User.create(username: "Andre", email:"andre@gmail.com", password:"123456")
-u5 = User.create(username: "Suzy", email:"suzy@gmail.com", password:"123456")
-u6 = User.create(username: "Hans", email:"hans@gmail.com", password:"123456")
-u7 = User.create(username: "Zelda", email:"zelda@gmail.com", password:"123456")
-u8 = User.create(username: "Johnny", email:"johnny@gmail.com", password:"123456")
+u4 = User.create(username: "Andre", email:"andre@gmail.com", password:"123456", image_url:"http://res.cloudinary.com/greenteamuimui/image/upload/v1501132683/user5_wnqa41.jpg")
+u5 = User.create(username: "Suzy", email:"suzy@gmail.com", password:"123456", image_url:"http://res.cloudinary.com/greenteamuimui/image/upload/v1501132684/user6_vbbyhf.jpg")
+u6 = User.create(username: "Hans", email:"hans@gmail.com", password:"123456",image_url:"http://res.cloudinary.com/greenteamuimui/image/upload/v1501132681/user4_xmu2vu.jpg")
+u7 = User.create(username: "Zelda", email:"zelda@gmail.com", password:"123456",image_url:"http://res.cloudinary.com/greenteamuimui/image/upload/v1501132685/user7_mkxynm.jpg" )
+u8 = User.create(username: "Johnny", email:"johnny@gmail.com", password:"123456", image_url:"http://res.cloudinary.com/greenteamuimui/image/upload/v1501132806/user8_nkimur.jpg")
 
 
 c1 = City.create(name:"San Francisco", photo_url:"http://res.cloudinary.com/greenteamuimui/image/upload/v1501043971/sf1_duv0ry.jpg")

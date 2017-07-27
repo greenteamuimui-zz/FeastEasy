@@ -4,6 +4,7 @@ import SearchResultsContainer from './search_results_container';
 
 
 const KitchenBox = ({kitchen}) => {
+  console.log(kitchen);
   let review = kitchen.review || {title: "Soon"};
   let picture;
   let score;
