@@ -106,6 +106,9 @@ p32 = Picture.create!(kitchen_id: k12.id, image_url: "http://res.cloudinary.com/
 p33 = Picture.create!(kitchen_id: k13.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877275/k6-p2_n2q5lt.jpg")
 p34 = Picture.create!(kitchen_id: k13.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500877201/k5-p2_kmjach.jpg")
 p35 = Picture.create!(kitchen_id: k13.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1500571067/k3-p3_expq2w.jpg")
+p36 = Picture.create!(kitchen_id: k4.id, image_url: "https://res.cloudinary.com/greenteamuimui/image/upload/v1501222678/k4-p1_ffgbwp.jpg")
+p37 = Picture.create!(kitchen_id: k4.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501222652/k4-p2_rapmep.jpg")
+p38 = Picture.create!(kitchen_id: k4.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501222653/k4-p3_nhk8xl.jpg")
 
 
 
