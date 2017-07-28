@@ -59,6 +59,7 @@ input[type=date] {
   line-height: 30px;
   font-size: 16px;
   cursor:pointer;
+  padding-left: 5px;
 }
 
 
@@ -131,4 +132,21 @@ input[type=submit]:active {
 .message-modal-body {
   background-image: url(/assets/message.png);
   background-size: cover;
+}
+
+.message-modal a.x {
+  position: absolute;
+  font: 16px/100% arial, sans-serif;
+  border-radius: 1px;
+  color: #78100D;
+  right: 0px;
+  top: 0px;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.message-modal a.x:hover {
+  cursor: pointer;
+  color: blue;
 }

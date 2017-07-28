@@ -1,5 +1,4 @@
 export const createFavorite = (favorite) => {
-  console.log(favorite);
   return (
     $.ajax({
       method: 'POST',

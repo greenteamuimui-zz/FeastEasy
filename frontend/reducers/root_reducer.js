@@ -7,6 +7,7 @@ import cityReducer from './city_reducer';
 import reviewReducer from './review_reducer';
 import favoriteReducer from './favorite_reducer';
 import searchReducer from './search_reducer';
+import userReducer from './user_reducer';
 import currentKitchenReducer from './currentKitchen_reducer';
 
 const rootReducer = combineReducers({
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   city: cityReducer,
   review: reviewReducer,
   search: searchReducer,
+  user: userReducer,
   // favorite: favoriteReducer
 });
 

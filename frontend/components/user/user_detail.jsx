@@ -3,6 +3,7 @@ import UserFormContainer from './user_form_container';
 import ReviewBoxItem from '../review/review_box_item';
 import WrappedfavKitchenBox from '../kitchen/favKitchen_box';
 import WrappedUserReviewBox from '../review/user_review_box';
+import WrappedreservationDetailBox from '../review/user_review_box';
 import {Link, withRouter } from 'react-router-dom';
 
 
@@ -58,7 +59,7 @@ class UserDetail extends React.Component {
 }
 // <div>
 //   <h2>Reservations</h2>
-//   {currentUser.reservations.map((reservation, idx) => <WrappedreservationDetailBox reservation={reservation} key={idx} />)}
+//   {currentUser.reservations.filter((reservation) => reservation.date > (new Date()).toISOString().slice(0, 10)).map((reservation, idx) => <WrappedreservationDetailBox reservation={reservation} key={idx} />)}
 // </div>
 
 export default UserDetail;

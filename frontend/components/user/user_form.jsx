@@ -43,7 +43,6 @@ class UserForm extends React.Component {
 
 
   render () {
-    console.log(this.props);
     return(
       <div>
         <div className="pic-form">

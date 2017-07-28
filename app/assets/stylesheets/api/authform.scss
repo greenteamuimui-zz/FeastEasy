@@ -47,7 +47,7 @@
   font-family: 'Zilla Slab', serif;
   font-size: 20px;
   width: 90%;
-  margin-left: 25px;
+  margin: auto;
   // border: 1px solid black;
 }
 
@@ -114,4 +114,7 @@ a.link-to-other {
   font-family: 'Zilla Slab', serif;
   display: flex;
   justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
 }

@@ -11,7 +11,6 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-    # debugger
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       render :show
@@ -21,7 +20,14 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    date = Date.today.to_s
+    @user = User.includes(:reservations).find(params[:id])
+    # debugger
+    # if @user.reservations.where('date > ?', date).empty?
+    #   @user.concat[future: ""]
+    # else
+    #   @user.reservations.concat[future: @user.reservations.where('date > ?', date)]
+    # end
   end
 
   def index

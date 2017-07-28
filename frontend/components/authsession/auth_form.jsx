@@ -129,6 +129,12 @@ class AuthForm extends React.Component {
               <input className="submit-button" type="submit" value={message} />
               </form>
               {otherlink}
+              <a onClick={() => this.props.logInAsGuest({
+                username: "Guest",
+                password: "123456"
+              })}>
+              Guest Log In
+              </a>
           </Modal>
         </div>
       );

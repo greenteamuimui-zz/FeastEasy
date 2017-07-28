@@ -23,14 +23,12 @@ class ReservationBox extends React.Component {
   }
 
   // calculateSeats () {
-  //   console.log(this.state.date);
   //   this.props.fetchReservations(this.props.match.params.kitchenId, this.state.date).then(() => {
   //     let reservations = Object.entries(this.props.reservation);
   //     let total_seats = 0;
   //     for (let i = 0; i > reservations.length; i++) {
   //       total_seats +=reservations[i][1].seats;
   //     }
-  //     console.log(total_seats);
   //     this.setState({remainingSeats: this.props.kitchenSize - total_seats});
   //   });
   // }
@@ -93,18 +91,19 @@ class ReservationBox extends React.Component {
     },
     content : {
       position                   : 'absolute',
-      top                        : '30%',
-      left                       : '40%',
+      top                        : '45%',
+      left                       : '35%',
       right                      : 'auto',
       bottom                     : 'auto',
-      border                     : '1px solid grey',
+      border                     : '1px solid #651601',
       background                 : '#fff',
       overflow                   : 'auto',
       WebkitOverflowScrolling    : 'touch',
       borderRadius               : '10px',
       outline                    : 'none',
-      padding                    : '20px',
+      padding                    : '30px',
       textalign                 :'center',
+      display                     :'flex',
     }
   };
 
@@ -115,7 +114,7 @@ class ReservationBox extends React.Component {
       if (Object.keys(this.props.reservation).length === 0) {
         message = "Sorry, it's full. Try another day!";
       } else {
-      message = "See you soon at the party!";
+      message = "Congrats, you got the seats! See you soon at the party!";
       }
     }
     return (
@@ -145,6 +144,7 @@ class ReservationBox extends React.Component {
           animationType={"fade"}
           style={customStyles}
           >
+          <a className ="x" onClick={this.closeModal}>x</a>
           <i className="material-icons">bubble_chart</i><h4>{message}</h4>
         </Modal>
 

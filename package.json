@@ -20,7 +20,8 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "superagent": "^3.5.2",
-    "webpack": "^3.3.0"
+    "webpack": "^3.3.0",
+    "react-slick": "latest"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",

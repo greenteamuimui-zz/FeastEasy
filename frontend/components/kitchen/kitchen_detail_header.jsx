@@ -23,7 +23,7 @@ const KitchenDetailHeader = ({kitchen, city, setAnchorRef}) => {
             {city}
           </h2>
           <h3>
-            Overall Score: {kitchen.overall_score.toFixed(2)}
+            Overall: {kitchen.overall_score.toFixed(2)}
           </h3>
           <div>
             <FavoriteButtonContainer kitchen={kitchen}/>

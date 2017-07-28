@@ -68,7 +68,6 @@ class KitchenDetail extends React.Component {
 
   render () {
     // if (Object.keys(this.props.kitchen).length > 1 && Object.keys(this.props.kitchen)[0]) {
-    //   console.log("here");
     //   return null;
     // }
     if (!this.props.currentKitchen) {

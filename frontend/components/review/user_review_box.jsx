@@ -17,11 +17,11 @@ const UserReviewBox = ({review}) => {
           </div>
             <div className="review-first-box">
               <h1><Link to={`/kitchens/${review.kitchenId}`}>{review.kitchenName}</Link></h1>
-              <h2>{review.cityName}</h2>
+              <h4>{review.cityName}</h4>
               <h2>{review.title}</h2>
               <h2>{review.body}</h2>
-              <h2>Overall Score:{review.overall_score}</h2>
-              <h2>Date: {review.date.slice(0, 10)}</h2>
+              <h5>Overall: {review.overall_score}</h5>
+              <h5>Date: {review.date.slice(0, 10)}</h5>
             </div>
           </div>
     </div>

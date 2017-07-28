@@ -18,8 +18,6 @@ const reservationReducer = (state = null, action) => {
 };
 
 // this also works but a long way
-// console.log(state);
-// console.log(action.kitchens);
 // if (Object.keys(action.kitchens).length === 0) {
 //   newState = {};
 // } else {

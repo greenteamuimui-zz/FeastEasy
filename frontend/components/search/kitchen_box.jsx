@@ -4,7 +4,7 @@ import SearchResultsContainer from './search_results_container';
 
 
 const KitchenBox = ({kitchen}) => {
-  let review = kitchen.review || {title: "Soon"};
+  let review = kitchen.review || {title: "Perhaps you shold write them a review..."};
   let picture;
   let score;
   if (kitchen.image_url[0] === undefined) {

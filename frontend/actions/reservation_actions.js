@@ -4,7 +4,6 @@ export const RECEIVE_RESERVATION = "RECEIVE_RESERVATION";
 export const RECEIVE_RESERVATIONS = "RECEIVE_RESERVATIONS";
 
 export const createReservation = (reservation) => (dispatch) => {
-  console.log(reservation);
   return (
     ReservationAPIUtil.createReservation(reservation).then(
       reservation => {

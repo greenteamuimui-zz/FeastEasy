@@ -8,6 +8,7 @@ import SearchBar from './header/searchbar';
 import SearchFormContainer from './header/search_form_container';
 import searchResultsContainer from './search/search_results_container';
 import UserDetailContainer from './user/user_detail_container';
+import UserIndexContainer from './user/user_index_container';
 
 // <img className="main" src="http://res.cloudinary.com/greenteamuimui/image/upload/c_scale,r_30,w_1182/v1500496835/imageedit_5_8288987673_i4iq3j.png" alt="main"/>
 
@@ -39,3 +40,4 @@ const App = () => (
   </div>);
 // <Route path="/searchResults/:cityId.:size.:date.:searchString" component={searchResultsContainer}/>
 export default App;
+// <Route exact path="/" component={UserIndexContainer} />

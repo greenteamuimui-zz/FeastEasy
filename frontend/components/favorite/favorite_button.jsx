@@ -34,23 +34,14 @@ class FavoriteButton extends React.Component {
         this.setState({favorited: false});
       });
     }
-    // let state = Boolean(!this.state.favorited);
-    // this.setState({favorited:state});
   }
 
-  // componentDidMount () {
-  //   this.props.fetchFavorite(this.state.kitchenId, this.state.userId);
-  // }
-
   componentWillReceiveProps(newProps) {
-    console.log(this.props);
-    console.log(newProps);
     if (this.props.kitchen.id !== newProps.kitchen.id) {
       let favorite = false;
       if (newProps.favArray.includes(newProps.currentUser.id)) {
         favorite = true;
       }
-      console.log(favorite);
       this.setState({
         favorite: {
           kitchen_id: newProps.match.params.kitchenId,
@@ -62,8 +53,6 @@ class FavoriteButton extends React.Component {
   }
 
   render () {
-    // console.log(this.props);
-    // console.log(this.state);
     let button;
     if (this.state.favorited === false) {
       button = <div className="favorite" onClick={this.handleSubmit}>

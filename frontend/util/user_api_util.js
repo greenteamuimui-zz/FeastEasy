@@ -7,3 +7,12 @@ export const updateUser = (id, image_url) => {
     })
   );
 };
+
+export const fetchUsers = () => {
+  return (
+    $.ajax({
+      method: 'GET',
+      url: '/api/users',
+    })
+  );
+};

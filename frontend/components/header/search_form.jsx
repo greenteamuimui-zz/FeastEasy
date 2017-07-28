@@ -18,25 +18,6 @@ class SearchForm extends React.Component {
 
   }
 
-  // componentDidMount(){
-  //   this.props.fetchCities();
-  //   if (!(this.props.search === null)) {
-  //     this.setState(this.props.search);
-  //   }
-  // }
-
-  // getSearch () {
-  //   let searchString;
-  //   if (this.props.match.params.searchString === "none") {
-  //     searchString = "";
-  //   }
-  //   return ({
-  //     city_id: this.props.match.params.cityId,
-  //     size: this.props.match.params.size,
-  //     date: this.props.match.params.date,
-  //     search_string: searchString
-  //   });
-  // }
   getSearch () {
     const query = qs.parse(this.props.location.search);
     return ({
@@ -89,31 +70,7 @@ componentWillReceiveProps (newProps) {
     const psearch = qs.stringify(params);
     this.props.history.push(`/searchResults?${psearch}`);
   }
-
-
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   this.props.fetchKitchens(this.state).then(() => {
-      // this.props.sendSearch(this.state);
-  //     let string = this.state.search_string || "none";
-  //     this.props.history.push(`/searchResults/${this.state.city_id}.${this.state.size}.${this.state.date}.${string}`);
-  //     // this.props.history.push(`/searchResults/${this.state.city_id}/${this.state.size}/${this.state.date}/${string}`);
-  //     // this.props.history.push({
-  //     //   pathname:'/searchResults',
-  //     //   cityId: this.state.city_id,
-  //     //   size: this.state.size,
-  //     //   date: this.state.date,
-  //     //   searchString: this.state.search_string
-  //     // });
-  //     // this.setState({
-  //     //   city_id: "",
-  //     //   size: "1",
-  //     //   date: "",
-  //     //   search_string:""
-  //     // });
-  //   });
-  // }
-
+  
   updateState(property) {
     return (e) => {
       this.setState({[property]:e.currentTarget.value});

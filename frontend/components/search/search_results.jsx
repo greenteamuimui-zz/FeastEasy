@@ -24,7 +24,6 @@ class searchResults extends React.Component {
   }
 
   // componentWillMount(){
-  //   console.log("sr-here1");
   //   this.props.fetchKitchens(this.getSearch());
   //   this.props.sendSearch(this.getSearch());
   //   if (!(this.props.search === null)) {
