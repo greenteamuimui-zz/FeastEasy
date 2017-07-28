@@ -22,13 +22,13 @@ c3 = City.create(name:"Hong Kong", photo_url:"http://res.cloudinary.com/greentea
 c4 = City.create(name:"London", photo_url:"http://res.cloudinary.com/greenteamuimui/image/upload/v1500510203/london_clojc4.jpg")
 c5 = City.create(name:"Stockholm", photo_url:"http://res.cloudinary.com/greenteamuimui/image/upload/v1500510371/stockholm1_wvs9ib.jpg")
 
-k1 = Kitchen.create!(user_id:u1.id, city_id:c1.id, name:"Fan-Asian table", cuisine:"Pan-Asian", size:8, feast_time:"7:30 PM", address:"700 Oak Street, San Francisco, CA 94117", phone:"415-282-7339", about:"Are you a big fan of asian good? So am I!")
+k1 = Kitchen.create!(user_id:u1.id, city_id:c1.id, name:"Fan-Asian table", cuisine:"Pan-Asian", size:8, feast_time:"7:30 PM", address:"700 Oak Street, San Francisco, CA 94117", phone:"415-282-7339", about:"Are you a big fan of asian good? So am I! Come join us at party and make some kick ass asian food with the real foodie....(hehe)")
 
-k2 = Kitchen.create!(user_id:u2.id, city_id:c1.id, name:"Pelmenis Manifest", cuisine:"Russian", size:6, feast_time:"8:30 PM", address:"600 Market Street, San Francisco, CA 94103", phone:"415-432-4324", about:"Russian Dumplings with an asian kick.")
+k2 = Kitchen.create!(user_id:u2.id, city_id:c1.id, name:"Pelmenis Manifest", cuisine:"Russian", size:6, feast_time:"8:30 PM", address:"600 Market Street, San Francisco, CA 94103", phone:"415-432-4324", about:"Russian Dumplings with an asian kick. My wife is asian and we love making dumplings, when east meets even more EAST! Book your seats now!")
 
-k3 = Kitchen.create!(user_id:u3.id, city_id:c1.id, name:"Grill Time, beer time!", cuisine:"American", size:8, feast_time:"5:30 PM", address:"3621 26th Street, San Francisco, CA 94107", phone:"415-221-0038", about:"We start early with beer and good old american charcoal barbeque hotdogs!")
+k3 = Kitchen.create!(user_id:u3.id, city_id:c1.id, name:"Grill Time, beer time!", cuisine:"American", size:8, feast_time:"5:30 PM", address:"3621 26th Street, San Francisco, CA 94107", phone:"415-221-0038", about:"We start early with beer and good old american charcoal barbeque hotdogs! Who does nt love grilling the backyard, let's not kid ourselves, let's leave work a bit early , what'd you say?")
 
-k4 = Kitchen.create!(user_id:u1.id, city_id:c3.id, name:"Hong Kong Home Style Cafe", cuisine:"Chinese", size:12, feast_time:"7:30 PM", phone:"28898091", address:"City Garden, North Point, Hong Kong", about:"Milk tea all the way")
+k4 = Kitchen.create!(user_id:u1.id, city_id:c3.id, name:"Hong Kong Home Style Cafe", cuisine:"Chinese", size:12, feast_time:"7:30 PM", phone:"28898091", address:"City Garden, North Point, Hong Kong", about:"Milk tea all the way, who knows milktea can be so good, HK style french toast is soooo awesome, especially when made at home, come enjoy the HK kind of high-tea!")
 
 k5 = Kitchen.create!(user_id:u4.id, city_id:c1.id, name:"Andre's Scandinavian Kitchen", cuisine:"Scandinavian", size:6, feast_time:"7:00 PM", address:"2085 Bush St, San Francisco, CA 94115", phone:"415-233-7767", about:"Andre's inspiration for home Scandinavian cooking comes from his childhood meals at home in Ålesund, Norway. Just like his mom who prepared fresh fish, smoked meats and salads from crispy in-season vegetables, Andre strives to bring his childhood home to his new home in the Bay Area. But it doesn't end there, Andre is always experimenting with his friendly neighbors' cuisine, be it freshly baked Danishes from (where else, Denmark) to Finnish Ruisleipä, rye bread, to Swedish meatballs. And no, those are not the kind you find at Ikea. Andre's love of cooking and nostalgic desire to for home food will make you feel like you transported to Scandinavia. Minus the harsh winter.  Come join Andre and you will surely discover something new in your culinary adventures. ")
 
@@ -109,6 +109,21 @@ p35 = Picture.create!(kitchen_id: k13.id, image_url: "http://res.cloudinary.com/
 p36 = Picture.create!(kitchen_id: k4.id, image_url: "https://res.cloudinary.com/greenteamuimui/image/upload/v1501222678/k4-p1_ffgbwp.jpg")
 p37 = Picture.create!(kitchen_id: k4.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501222652/k4-p2_rapmep.jpg")
 p38 = Picture.create!(kitchen_id: k4.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501222653/k4-p3_nhk8xl.jpg")
+p39 = Picture.create!(kitchen_id: k14.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259142/k14-p1_gq5pas.webp")
+p40 = Picture.create!(kitchen_id: k14.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259143/k14-p2_ewdijr.jpg")
+p41 = Picture.create!(kitchen_id: k14.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259571/k14-p3_jg1hjm.jpg")
+p42 = Picture.create!(kitchen_id: k15.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259251/k15-p1_sn6fxw.jpg")
+p43 = Picture.create!(kitchen_id: k15.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259252/k15-p2_qcn52p.jpg")
+p44 = Picture.create!(kitchen_id: k15.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259254/k15-p3_e4vcfi.jpg")
+p45 = Picture.create!(kitchen_id: k16.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259353/k16-p1_siocpv.jpg")
+p46 = Picture.create!(kitchen_id: k16.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259355/k16-p2_susiqf.jpg")
+p47 = Picture.create!(kitchen_id: k16.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259722/k16-p3_vagxqf.jpg")
+p48 = Picture.create!(kitchen_id: k17.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501223154/k17-p1_ah9fiw.jpg")
+p49 = Picture.create!(kitchen_id: k17.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501223155/k17-p2_fpfjsv.jpg")
+p50 = Picture.create!(kitchen_id: k17.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501223157/k17-p3_ndwbdx.jpg")
+p51 = Picture.create!(kitchen_id: k18.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259420/k18-p1_jqkkqd.jpg")
+p52 = Picture.create!(kitchen_id: k18.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259422/k18-p2_kztzxw.jpg")
+p53 = Picture.create!(kitchen_id: k18.id, image_url: "http://res.cloudinary.com/greenteamuimui/image/upload/v1501259423/k18-p3_ckirrk.jpg")
 
 
 
@@ -126,8 +141,13 @@ r11 = Review.create!(kitchen_id: k2.id, user_id: u8.id, title:"Need to come back
 r12 = Review.create!(kitchen_id: k5.id, user_id: u1.id, title:"Awesome...", body:"This restaurant has everything I expect from a Sushi restaurant in this part of the city - hidden away, cozy atmosphere, great service (waitress was unreliably nice), excellent food. Even the portions exceeded my expectations - the plates were not small and we could have easily ordered less. Desert, while limited variety, was very good. Even the grumpy owner added to the atmosphere. We were a group of 5 and were the first ones for the evening, we did not have to wait long to get our entrees.",food_score:5, atmosphere_score: 2, host_score: 3, price_score: 4)
 r13 = Review.create!(kitchen_id: k7.id, user_id: u4.id, title:"Incredible experience", body:" This is not a venue for a mindless meal. However, if you want character and staff with values, ethics and respect for food this place is for you. If you want to get a story for every meal, you will enjoy Miya's. If you want to challenge your assumptions about what it means to have a meal that is good for you and the environment, do not pass this by.
 ",food_score:5, atmosphere_score: 5, host_score: 5, price_score: 4)
-r14 = Review.create!(kitchen_id: k3.id, user_id: u6.id, title:"No Need to come back...", body:"Thee wine was bad, and the food (we got Salmon Ceviche and salad) was just ok. It was probably not a great choice for dinner but would definitely come back for the wine. Cheese plates also looked good on neighboring tables.",food_score:1, atmosphere_score: 1, host_score: 2, price_score: 2)
-
+r14 = Review.create!(kitchen_id: k3.id, user_id: u6.id, title:"No Need to come back...", body:"The wine was bad, and the food (we got Salmon Ceviche and salad) was just ok. It was probably not a great choice for dinner but would definitely come back for the wine. Cheese plates also looked good on neighboring tables.",food_score:1, atmosphere_score: 1, host_score: 2, price_score: 2)
+r15 = Review.create!(kitchen_id: k8.id, user_id: u1.id, title:"Wonderful experience!", body:"CrispyChicken, Steak Tips, Crab and Meatballs.... yum right? But there's a catch... it's not real meat! I wasn't quite sure on how to feel about it while eating it, but It was surprisingly pleasant.",food_score:4, atmosphere_score: 2, host_score: 2, price_score: 2)
+r16 = Review.create!(kitchen_id: k9.id, user_id: u3.id, title:"Not sure about it.", body:"Just came back from the party and honestly, it was not very good. The Daily Special came with 'chicken teriyaki, salmon teriyaki, and beef teriyaki.' Sounds like an amazing deal for $14, right? But the chicken was completely cold and the salmon was hard. Only the beef was tasty, albeit extremely fatty.",food_score:2, atmosphere_score: 3, host_score: 2, price_score: 2)
+r17 = Review.create!(kitchen_id: k10.id, user_id: u3.id, title:"Great Great Great time.", body:"Love the ambience and the food is simple and flavorful. I recommend going here is a small group of 2 or 3 since it's a hole in the wall kind of place. Our server was a sweetheart. We had a pitcher of sangria which serves 2 pretty well and some house special pupusas for appetizers. I really liked their salad, the dressing was very refreshing.",food_score:3, atmosphere_score: 5, host_score: 4, price_score: 2)
+r18 = Review.create!(kitchen_id: k11.id, user_id: u8.id, title:"While not in Texas...", body:"I can't believe I just ate here for the first time. It won't be the last! Everything I had here was so ridiculously good! I'm a vegetarian and now I want to try their meat. The staff was nice - they even asked if I was veggie or vegan when ordering potato salad. ",food_score:3, atmosphere_score: 5, host_score: 4, price_score: 2)
+r19 = Review.create!(kitchen_id: k12.id, user_id: u2.id, title:"YUMMMMMMM", body:"I honestly never really knew what Bulgarian food consisted of besides piroshkis and dumplings.  A bunch of us from work decided to head over to this spot and order the preset banquet menu.",food_score:4, atmosphere_score: 5, host_score: 4, price_score: 5)
+r20 = Review.create!(kitchen_id: k13.id, user_id: u5.id, title:"Being a prime rib expert...", body:" The Baby back ribs are amazing, especially with the secret BBQ sauce ( you have to ask for it) love the garlic bread too! Some might think it's expensive but I don't because of the quality of the meat.",food_score:4, atmosphere_score: 5, host_score: 4, price_score: 5)
 
 
 f1 = Favorite.create!(kitchen_id: k1.id, user_id:u2.id)
