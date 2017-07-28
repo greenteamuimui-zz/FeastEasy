@@ -6,7 +6,7 @@
 // styling for review box ans individual review
 .review-box {
   font-family: 'Zilla Slab', serif;
-  margin: 10px 10px 20px 10px;
+  margin: 30px 10px 20px 10px;
   padding: 20px;
   box-shadow: 2px 2px 2px #651601;
   border-radius: 5px;
@@ -110,7 +110,7 @@ img.icon {
 
 // styling for the submit-review form (font size and colors are from above)
 .review-form-box {
-  margin:10px;
+  margin:30px 10px 30px 10px;
   padding:20px;
   // border: 2px solid #651601;
   box-shadow: 2px 2px 2px #651601;
@@ -170,10 +170,10 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-input[type="radio"]:checked {
+input[type="radio"] {
   background-position: 0px 30px;
 }
 
-input[type="radio"]:checked:before, input[type="radio"] ~ input[type="radio"]:checked {
-  background-position: 30px 30px;
+input[type="radio"]:checked ~ input[type="radio"] {
+  background-position: 0px 0px;
 }

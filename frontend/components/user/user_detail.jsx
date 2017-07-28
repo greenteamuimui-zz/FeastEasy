@@ -34,7 +34,7 @@ class UserDetail extends React.Component {
                   <img src={currentUser.image_url}/>
                 }
               </div>
-              <div>
+              <div className="user-details">
               <i className="material-icons">face</i><h1>{currentUser.username}</h1>
               <i className="material-icons">email</i><h2>{currentUser.email}</h2>
               <i className="material-icons">cake</i><h2>Joined The Party: {currentUser.joinDate.slice(0, 10)}</h2>

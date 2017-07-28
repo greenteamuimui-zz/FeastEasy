@@ -60,12 +60,10 @@ div.search-bar h2 {
   height: 100%;
   align-items: center;
   background-color: #FFF5EE;
+  border:1px solid #2b0005;
+  box-shadow: 1px 1px 1px #2b0005;
 }
 
-.search-form:hover {
-  box-shadow: 2px 2px 2px #2b0005;
-  transform: translateY(2px);
-}
 
 .seats-selector {
   width:40px;

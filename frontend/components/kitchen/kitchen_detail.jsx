@@ -77,6 +77,12 @@ class KitchenDetail extends React.Component {
     let kitchen = this.props.currentKitchen;
     let city = this.props.currentKitchen.city_name;
     let favorites = this.props.currentKitchen.favorite_id;
+    let backPage;
+    if (!(this.props.search === null)) {
+      backPage = <Link to={`/searchResults?cityId=${this.props.search.city_id}&date=${this.props.search.date}&searchString=${this.props.search.search_string}&size=${this.props.search.size}`}>Back to Recent Search</Link>;
+    } else {
+      backPage = <Link to="/">Home</Link>;
+    }
     let pictures = Object.values(kitchen.image_url);
     let picComponent = pictures.map((picture, idx) => {
       return (
@@ -100,7 +106,7 @@ class KitchenDetail extends React.Component {
               <p onClick={this.onAnchorClick("about")} className="anchors">About</p>
               <p onClick={this.onAnchorClick("reservation")} className="anchors">Reservation</p>
               <p onClick={this.onAnchorClick("reviews")} className="anchors">Reviews</p>
-              <p><a onClick={() => this.props.history.goBack()}>Back to Results</a></p>
+              <p>{backPage}</p>
             </div>
           </div>
           <KitchenDetailHeader kitchen={kitchen} city={city} setAnchorRef={this.setAnchorRef} />
