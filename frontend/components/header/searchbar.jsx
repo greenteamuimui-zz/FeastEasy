@@ -6,7 +6,7 @@ export default () => (
   <div className="search-bar">
     <section>
       <h2>
-        Find your favorite kitchen now...
+        Join the next dinner party...
       </h2>
       <SearchFormContainer />
       <div>
@@ -14,7 +14,7 @@ export default () => (
       </div>
     </section>
     <div>
-      
+
     </div>
   </div>
 );

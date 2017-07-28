@@ -7,7 +7,7 @@ const Header = ({currentUser, logout, logInAsGuest}) =>{
       <div className="header-afterlogin">
         <h1>Welcome {currentUser.username}!</h1>
         <a onClick={logout}>Log Out</a>
-        <Link to='./myPage'>My Profile</Link>
+        <Link to='/myPage'>My Profile</Link>
       </div>
     );
   } else {

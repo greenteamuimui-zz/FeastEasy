@@ -12,18 +12,16 @@ div.static a {
 }
 
 .app-header {
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Zilla Slab', serif;
   display: flex;
   width: 100%;
   // box-sizing: border-box;
-  // border: 1px solid black;
   justify-content: space-between;
   margin: 0 auto;
   align-items: center;
-  height: 60px;
+  height: 55px;
   background-color: white;
-  border:2px solid grey;
 }
 
 .app-left h1 {

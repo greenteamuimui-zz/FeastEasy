@@ -3,7 +3,7 @@
   box-shadow: 2px 2px 2px grey;
   font-family: 'Zilla Slab', serif;
   border-radius: 5px;
-  background-color: white;
+  background-color: #FFF5EE;
   width: 85%;
   margin: 20px auto 40px auto;
   // margin-left:auto;
@@ -33,12 +33,16 @@
 .indiv-kitchen h1{
   font-size: 20px;
   padding: 10px;
+  color: #651601;
+  font-weight: 900;
 }
 
 .indiv-kitchen h2{
   padding-left:10px;
   padding-top: 5px;
-  font-size: 14px
+  font-size: 14px;
+  color: #76323F;
+  font-weight: 600;
 }
 
 .review-info p {

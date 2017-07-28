@@ -6,12 +6,12 @@
 // styling for review box ans individual review
 .review-box {
   font-family: 'Zilla Slab', serif;
-  border: 2px solid #651601;
   margin: 10px 10px 20px 10px;
   padding: 20px;
-  box-shadow: 2px 3px 3px #651601;
-  border-radius: 10px;
+  box-shadow: 2px 2px 2px #651601;
+  border-radius: 5px;
   height: 100%;
+  background-color: #FFF5EE;
   // overflow: scroll;
 }
 
@@ -32,8 +32,8 @@ li {
 .review-section h1 {
   // border: 1px solid black;
   color: #651601;
-  padding: 10px;
-  // padding: 10px 10px 5px 10px;
+  // padding: 10px;
+  padding: 10px 10px 0px 10px;
   font-size: 30px;
   font-weight: 600;
 }
@@ -70,9 +70,9 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #651601;
-  box-shadow: 2px 3px 3px #651601;
-  border-radius: 10px;
+  // border: 2px solid #651601;
+  box-shadow: 2px 2px 2px #651601;
+  border-radius: 5px;
   background-color: white;
 }
 
@@ -110,12 +110,12 @@ img.icon {
 
 // styling for the submit-review form (font size and colors are from above)
 .review-form-box {
-  border: 2px solid black;
   margin:10px;
   padding:20px;
-  border: 2px solid #651601;
-  box-shadow: 2px 3px 3px #651601;
-  border-radius: 10px;
+  // border: 2px solid #651601;
+  box-shadow: 2px 2px 2px #651601;
+  border-radius: 5px;
+  background-color: #FFF5EE;
 }
 
 .review-form{
@@ -125,8 +125,7 @@ img.icon {
   display:flex;
   position: relative;
   border: 2px solid #651601;
-  box-shadow: 2px 3px 3px #651601;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 10px;
 }
 
