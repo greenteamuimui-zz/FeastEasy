@@ -89,7 +89,7 @@ class ReservationBox extends React.Component {
       left              : 0,
       right             : 0,
       bottom            : 0,
-      backgroundColor   : 'rgba(236, 229, 229, 0.75)'
+      backgroundColor   : 'transparent',
     },
     content : {
       position                   : 'absolute',
@@ -97,19 +97,21 @@ class ReservationBox extends React.Component {
       left                       : '40%',
       right                      : 'auto',
       bottom                     : 'auto',
-      border                     : '3px solid #AE1628',
+      border                     : '1px solid grey',
       background                 : '#fff',
       overflow                   : 'auto',
       WebkitOverflowScrolling    : 'touch',
       borderRadius               : '10px',
       outline                    : 'none',
       padding                    : '20px',
+      textalign                 :'center',
     }
   };
 
     let message = "";
     let kitchenSize = this.props.kitchenSize;
     if (!(this.props.reservation === null )) {
+
       if (Object.keys(this.props.reservation).length === 0) {
         message = "Sorry, it's full. Try another day!";
       } else {
@@ -136,14 +138,14 @@ class ReservationBox extends React.Component {
         </form>
 
         <Modal
-          className="modal"
+          className="message-modal"
           isOpen={this.state.modalState}
           contentLabel="Modal"
           onRequestClose={this.closeModal}
           animationType={"fade"}
           style={customStyles}
           >
-          <h4>{message}</h4>
+          <i className="material-icons">bubble_chart</i><h4>{message}</h4>
         </Modal>
 
 
@@ -152,5 +154,6 @@ class ReservationBox extends React.Component {
   }
 
 }
+// <img src="/assets/message.png"/>
 
 export default withRouter(ReservationBox);

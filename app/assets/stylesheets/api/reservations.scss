@@ -120,3 +120,15 @@ input[type=submit]:active {
   box-shadow: 0 1px #999;
   transform: translateY(4px);
 }
+
+.message-modal {
+  color:#651601;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.message-modal-body {
+  background-image: url(/assets/message.png);
+  background-size: cover;
+}
