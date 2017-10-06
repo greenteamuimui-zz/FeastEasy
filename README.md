@@ -14,7 +14,7 @@
 FeastEasy is a web application inspired by OpenTable, AirBnb and Couchsurfing built using React.js with Redux on the frontend and Ruby on Rails with a PostgreSQL database on the backend. This app implements the following functionality:
 
 ### **Design Docs**  
-+ [View Wireframes](.docs/wireframes/)  
++ [View Wireframes](docs/wireframes/)  
 
 ### **Features**
 
@@ -25,7 +25,7 @@ FeastEasy is a web application inspired by OpenTable, AirBnb and Couchsurfing bu
 + Add favorites
 
 
-### **User Authentification**  
+### **User Authentication**  
 
 ![FeastEasy AuthForm Modal](app/assets/images/authFeature.gif)
 
