@@ -10,7 +10,7 @@ import searchResultsContainer from './search/search_results_container';
 import UserDetailContainer from './user/user_detail_container';
 import UserIndexContainer from './user/user_index_container';
 
-// <img className="main" src="http://res.cloudinary.com/greenteamuimui/image/upload/c_scale,r_30,w_1182/v1500496835/imageedit_5_8288987673_i4iq3j.png" alt="main"/>
+// <img className="main" src="https://res.cloudinary.com/greenteamuimui/image/upload/c_scale,r_30,w_1182/v1500496835/imageedit_5_8288987673_i4iq3j.png" alt="main"/>
 
 const App = () => (
   <div className='app'>
@@ -18,7 +18,7 @@ const App = () => (
     <header className="app-header">
       <div className="app-left">
         <Link to="/">
-          <img className="s-logo" src="http://res.cloudinary.com/greenteamuimui/image/upload/v1500503298/apron_hyqxck.png" alt="logo"/>
+          <img className="s-logo" src="https://res.cloudinary.com/greenteamuimui/image/upload/v1500503298/apron_hyqxck.png" alt="logo"/>
         </Link>
         <Link to="/">
           <h1>Feast Easy</h1>
