@@ -4,7 +4,7 @@
   else
     image_url = user.image_url
   end
-  if users.kitchen.empty?
+  if user.kitchens.empty?
     kitchenId = ""
     kitchenName = ""
   else
