@@ -4,8 +4,7 @@
   else
     image_url = user.image_url
   end
-
-  if user.kitchens == nil
+  if users.kitchen.empty?
     kitchenId = ""
     kitchenName = ""
   else
