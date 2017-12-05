@@ -1,3 +1,24 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.userBox{
+  padding: 50px 10px 10px 10px;
+  // border: 1px solid black;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Zilla Slab', serif;
+  color: maroon;
+  text-align: center;
+}
+
+.userBox h2{
+  padding: 5px;
+}
+
+.userBox img{
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+}

@@ -10,11 +10,9 @@ export default () => (
       </h2>
       <SearchFormContainer />
       <div>
-
       </div>
     </section>
     <div>
-
     </div>
   </div>
 );
